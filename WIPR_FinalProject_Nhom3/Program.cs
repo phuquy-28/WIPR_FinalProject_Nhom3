@@ -16,7 +16,14 @@ namespace WIPR_FinalProject_Nhom3
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+
+            LoginForm loginFrm = new LoginForm();
+
+            if (loginFrm.ShowDialog() == DialogResult.OK)
+            {
+                MainFormStaff mainFrm = new MainFormStaff();
+                Application.Run(mainFrm);
+            }
         }
     }
 }
