@@ -39,7 +39,17 @@ namespace WIPR_FinalProject_Nhom3
 
         private void labelNewUser_Click(object sender, EventArgs e)
         {
-
+            if (radioButtonStaff.Checked)
+            {
+                StaffRegisterForm staffRegisterFrm = new StaffRegisterForm();
+                staffRegisterFrm.ShowDialog();
+            }
+            else if (radioButtonManager.Checked)
+            {
+                ManagerRegisterForm managerRegisterForm = new ManagerRegisterForm();
+                managerRegisterForm.ShowDialog();
+            }
+            
         }
 
         private void checkboxShowPass_CheckedChanged(object sender, EventArgs e)
@@ -51,6 +61,21 @@ namespace WIPR_FinalProject_Nhom3
             else
             {
                 textboxPassword.PasswordChar = '●';
+            }
+        }
+
+        private void labelForgetPassWord_Click(object sender, EventArgs e)
+        {
+            if (radioButtonStaff.Checked)
+            {
+                RecoveryPasswordForm recoveryPasswordForm = new RecoveryPasswordForm();
+                recoveryPasswordForm.ShowDialog();
+            }
+            else if (radioButtonManager.Checked)
+            {
+                RecoveryPasswordForm recoveryPasswordForm = new RecoveryPasswordForm();
+                recoveryPasswordForm.labelTypeAccount.Text = "MANAGER ACCOUNT";
+                recoveryPasswordForm.ShowDialog();
             }
         }
     }

@@ -24,6 +24,9 @@ namespace WIPR_FinalProject_Nhom3
                 MainFormStaff mainFrm = new MainFormStaff();
                 Application.Run(mainFrm);
             }
+
+            //AddVehicleForm addVehicle = new AddVehicleForm();
+            //Application.Run(addVehicle);
         }
     }
 }

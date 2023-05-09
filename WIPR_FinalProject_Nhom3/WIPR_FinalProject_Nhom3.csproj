@@ -34,6 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.5.0.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -46,6 +50,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ManagerRegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerRegisterForm.Designer.cs">
+      <DependentUpon>ManagerRegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MY_DB.cs" />
+    <Compile Include="RecoveryPasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecoveryPasswordForm.Designer.cs">
+      <DependentUpon>RecoveryPasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffRegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffRegisterForm.Designer.cs">
+      <DependentUpon>StaffRegisterForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="USER.cs" />
     <Compile Include="Work\WORK.cs" />
     <Compile Include="Work\AddWorkForm.cs">
       <SubType>Form</SubType>
@@ -53,11 +77,11 @@
     <Compile Include="Work\AddWorkForm.Designer.cs">
       <DependentUpon>AddWorkForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="NewVehicle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="NewVehicle.Designer.cs">
+      <DependentUpon>NewVehicle.cs</DependentUpon>
     </Compile>
     <Compile Include="Work\ListWorkForm.cs">
       <SubType>Form</SubType>
@@ -91,6 +115,12 @@
     <Compile Include="Work\UpdateWorkForm.Designer.cs">
       <DependentUpon>UpdateWorkForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ManagerRegisterForm.resx">
+      <DependentUpon>ManagerRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewVehicle.resx">
+      <DependentUpon>NewVehicle.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +132,13 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="RecoveryPasswordForm.resx">
+      <DependentUpon>RecoveryPasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffRegisterForm.resx">
+      <DependentUpon>StaffRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textboxUsername = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -41,18 +40,10 @@
             this.checkboxShowPass = new System.Windows.Forms.CheckBox();
             this.radioButtonStaff = new System.Windows.Forms.RadioButton();
             this.radioButtonManager = new System.Windows.Forms.RadioButton();
+            this.labelForgetPassWord = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(2, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(309, 354);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -158,6 +149,7 @@
             this.radioButtonStaff.Name = "radioButtonStaff";
             this.radioButtonStaff.Size = new System.Drawing.Size(52, 19);
             this.radioButtonStaff.TabIndex = 12;
+            this.radioButtonStaff.TabStop = true;
             this.radioButtonStaff.Text = "Staff";
             this.radioButtonStaff.UseVisualStyleBackColor = true;
             // 
@@ -172,11 +164,34 @@
             this.radioButtonManager.Text = "Manager";
             this.radioButtonManager.UseVisualStyleBackColor = true;
             // 
+            // labelForgetPassWord
+            // 
+            this.labelForgetPassWord.AutoSize = true;
+            this.labelForgetPassWord.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelForgetPassWord.Font = new System.Drawing.Font("Modern No. 20", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Italic | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelForgetPassWord.Location = new System.Drawing.Point(553, 330);
+            this.labelForgetPassWord.Name = "labelForgetPassWord";
+            this.labelForgetPassWord.Size = new System.Drawing.Size(151, 18);
+            this.labelForgetPassWord.TabIndex = 14;
+            this.labelForgetPassWord.Text = "Forget your password?";
+            this.labelForgetPassWord.Click += new System.EventHandler(this.labelForgetPassWord_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(2, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(309, 354);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 355);
+            this.Controls.Add(this.labelForgetPassWord);
             this.Controls.Add(this.radioButtonManager);
             this.Controls.Add(this.radioButtonStaff);
             this.Controls.Add(this.labelNewUser);
@@ -213,5 +228,6 @@
         private System.Windows.Forms.CheckBox checkboxShowPass;
         private System.Windows.Forms.RadioButton radioButtonStaff;
         private System.Windows.Forms.RadioButton radioButtonManager;
+        private System.Windows.Forms.Label labelForgetPassWord;
     }
 }
