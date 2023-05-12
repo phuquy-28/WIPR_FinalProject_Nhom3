@@ -50,10 +50,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ManagerRegisterForm.cs">
+    <Compile Include="Registration\ManagerRegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ManagerRegisterForm.Designer.cs">
+    <Compile Include="Registration\ManagerRegisterForm.Designer.cs">
       <DependentUpon>ManagerRegisterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MY_DB.cs" />
@@ -63,10 +63,10 @@
     <Compile Include="RecoveryPasswordForm.Designer.cs">
       <DependentUpon>RecoveryPasswordForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="StaffRegisterForm.cs">
+    <Compile Include="Registration\StaffRegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="StaffRegisterForm.Designer.cs">
+    <Compile Include="Registration\StaffRegisterForm.Designer.cs">
       <DependentUpon>StaffRegisterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="USER.cs" />
@@ -77,10 +77,10 @@
     <Compile Include="Work\AddWorkForm.Designer.cs">
       <DependentUpon>AddWorkForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewVehicle.cs">
+    <Compile Include="Vehicle\NewVehicle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewVehicle.Designer.cs">
+    <Compile Include="Vehicle\NewVehicle.Designer.cs">
       <DependentUpon>NewVehicle.cs</DependentUpon>
     </Compile>
     <Compile Include="Work\ListWorkForm.cs">
@@ -115,10 +115,10 @@
     <Compile Include="Work\UpdateWorkForm.Designer.cs">
       <DependentUpon>UpdateWorkForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ManagerRegisterForm.resx">
+    <EmbeddedResource Include="Registration\ManagerRegisterForm.resx">
       <DependentUpon>ManagerRegisterForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewVehicle.resx">
+    <EmbeddedResource Include="Vehicle\NewVehicle.resx">
       <DependentUpon>NewVehicle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
@@ -135,7 +135,7 @@
     <EmbeddedResource Include="RecoveryPasswordForm.resx">
       <DependentUpon>RecoveryPasswordForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="StaffRegisterForm.resx">
+    <EmbeddedResource Include="Registration\StaffRegisterForm.resx">
       <DependentUpon>StaffRegisterForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
