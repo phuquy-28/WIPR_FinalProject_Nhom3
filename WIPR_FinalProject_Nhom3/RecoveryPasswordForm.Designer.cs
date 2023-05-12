@@ -52,6 +52,7 @@
             this.buttonRegister.TabIndex = 21;
             this.buttonRegister.Text = "Recovery";
             this.buttonRegister.UseVisualStyleBackColor = true;
+            this.buttonRegister.Click += new System.EventHandler(this.buttonRegister_Click);
             // 
             // checkBoxShowPassword
             // 

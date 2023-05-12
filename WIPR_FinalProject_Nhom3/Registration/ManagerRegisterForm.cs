@@ -17,5 +17,10 @@ namespace WIPR_FinalProject_Nhom3
             InitializeComponent();
             this.AcceptButton = buttonRegister;
         }
+
+        private void buttonRegister_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

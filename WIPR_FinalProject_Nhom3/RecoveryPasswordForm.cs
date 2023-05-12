@@ -16,5 +16,10 @@ namespace WIPR_FinalProject_Nhom3
         {
             InitializeComponent();
         }
+
+        private void buttonRegister_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
