@@ -70,6 +70,7 @@
       <DependentUpon>StaffRegisterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="USER.cs" />
+    <Compile Include="VEHICLE.cs" />
     <Compile Include="Work\WORK.cs" />
     <Compile Include="Work\AddWorkForm.cs">
       <SubType>Form</SubType>

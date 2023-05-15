@@ -77,25 +77,25 @@
             // addVehicleToolStripMenuItem
             // 
             this.addVehicleToolStripMenuItem.Name = "addVehicleToolStripMenuItem";
-            this.addVehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addVehicleToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.addVehicleToolStripMenuItem.Text = "Add Vehicle";
             // 
             // editVehicleToolStripMenuItem
             // 
             this.editVehicleToolStripMenuItem.Name = "editVehicleToolStripMenuItem";
-            this.editVehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editVehicleToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.editVehicleToolStripMenuItem.Text = "Edit Vehicle";
             // 
             // deleteVehicleToolStripMenuItem
             // 
             this.deleteVehicleToolStripMenuItem.Name = "deleteVehicleToolStripMenuItem";
-            this.deleteVehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteVehicleToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.deleteVehicleToolStripMenuItem.Text = "Delete Vehicle";
             // 
             // vehicleListToolStripMenuItem
             // 
             this.vehicleListToolStripMenuItem.Name = "vehicleListToolStripMenuItem";
-            this.vehicleListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vehicleListToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.vehicleListToolStripMenuItem.Text = "Vehicle List";
             // 
             // wORKToolStripMenuItem
@@ -112,25 +112,25 @@
             // addWorkToolStripMenuItem
             // 
             this.addWorkToolStripMenuItem.Name = "addWorkToolStripMenuItem";
-            this.addWorkToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addWorkToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.addWorkToolStripMenuItem.Text = "Add Work";
             // 
             // editWorkToolStripMenuItem
             // 
             this.editWorkToolStripMenuItem.Name = "editWorkToolStripMenuItem";
-            this.editWorkToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editWorkToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.editWorkToolStripMenuItem.Text = "Edit Work";
             // 
             // deleteWorkToolStripMenuItem
             // 
             this.deleteWorkToolStripMenuItem.Name = "deleteWorkToolStripMenuItem";
-            this.deleteWorkToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteWorkToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.deleteWorkToolStripMenuItem.Text = "Delete Work";
             // 
             // workListToolStripMenuItem
             // 
             this.workListToolStripMenuItem.Name = "workListToolStripMenuItem";
-            this.workListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.workListToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
             this.workListToolStripMenuItem.Text = "Work List";
             // 
             // cONTRACTToolStripMenuItem
@@ -147,25 +147,25 @@
             // addContractToolStripMenuItem
             // 
             this.addContractToolStripMenuItem.Name = "addContractToolStripMenuItem";
-            this.addContractToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addContractToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.addContractToolStripMenuItem.Text = "Add Contract";
             // 
             // editContractToolStripMenuItem
             // 
             this.editContractToolStripMenuItem.Name = "editContractToolStripMenuItem";
-            this.editContractToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editContractToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.editContractToolStripMenuItem.Text = "Edit Contract";
             // 
             // deleteContractToolStripMenuItem
             // 
             this.deleteContractToolStripMenuItem.Name = "deleteContractToolStripMenuItem";
-            this.deleteContractToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteContractToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.deleteContractToolStripMenuItem.Text = "Delete Contract";
             // 
             // contractListToolStripMenuItem
             // 
             this.contractListToolStripMenuItem.Name = "contractListToolStripMenuItem";
-            this.contractListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.contractListToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.contractListToolStripMenuItem.Text = "Contract List";
             // 
             // iNCOMEToolStripMenuItem
@@ -180,23 +180,23 @@
             // viewIncomeToolStripMenuItem
             // 
             this.viewIncomeToolStripMenuItem.Name = "viewIncomeToolStripMenuItem";
-            this.viewIncomeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.viewIncomeToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.viewIncomeToolStripMenuItem.Text = "View Income";
             // 
             // statisticToolStripMenuItem
             // 
             this.statisticToolStripMenuItem.Name = "statisticToolStripMenuItem";
-            this.statisticToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.statisticToolStripMenuItem.Size = new System.Drawing.Size(142, 22);
             this.statisticToolStripMenuItem.Text = "Statistic";
             // 
-            // MainForm
+            // MainFormStaff
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "MainForm";
+            this.Name = "MainFormStaff";
             this.Text = "MainForm";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
