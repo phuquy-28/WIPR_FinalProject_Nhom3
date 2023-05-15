@@ -16,5 +16,13 @@ namespace WIPR_FinalProject_Nhom3
         {
             InitializeComponent();
         }
+        WORK work = new WORK();
+        private void ListWorkForm_Load(object sender, EventArgs e)
+        {
+            dataGridViewListWork.DataSource = work.getWorkList();
+            dataGridViewListWork.ReadOnly = true;
+            dataGridViewListWork.AllowUserToAddRows = false;
+            //
+        }
     }
 }
