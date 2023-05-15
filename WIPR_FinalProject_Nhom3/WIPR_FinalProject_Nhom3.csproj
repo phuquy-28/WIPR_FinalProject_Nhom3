@@ -138,6 +138,18 @@
     <EmbeddedResource Include="Registration\StaffRegisterForm.resx">
       <DependentUpon>StaffRegisterForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Work\AddWorkForm.resx">
+      <DependentUpon>AddWorkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Work\ListWorkForm.resx">
+      <DependentUpon>ListWorkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Work\RemoveWorkForm.resx">
+      <DependentUpon>RemoveWorkForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Work\UpdateWorkForm.resx">
+      <DependentUpon>UpdateWorkForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -21,5 +21,29 @@ namespace WIPR_FinalProject_Nhom3
         {
             this.Close();
         }
+
+        private void addWorkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddWorkForm addWorkF = new AddWorkForm();
+            addWorkF.ShowDialog();
+        }
+
+        private void editWorkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UpdateWorkForm updateWorkF = new UpdateWorkForm();
+            updateWorkF.ShowDialog();
+        }
+
+        private void deleteWorkToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            RemoveWorkForm removeWorkF = new RemoveWorkForm();
+            removeWorkF.ShowDialog();
+        }
+
+        private void workListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ListWorkForm listWorkF = new ListWorkForm();
+            listWorkF.ShowDialog();
+        }
     }
 }

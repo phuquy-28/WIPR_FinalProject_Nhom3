@@ -28,12 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.dataGridViewListWork = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListWork)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dataGridViewListWork
+            // 
+            this.dataGridViewListWork.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridViewListWork.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewListWork.Location = new System.Drawing.Point(29, 27);
+            this.dataGridViewListWork.Name = "dataGridViewListWork";
+            this.dataGridViewListWork.RowHeadersWidth = 51;
+            this.dataGridViewListWork.RowTemplate.Height = 24;
+            this.dataGridViewListWork.Size = new System.Drawing.Size(736, 346);
+            this.dataGridViewListWork.TabIndex = 0;
+            // 
+            // ListWorkForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.dataGridViewListWork);
+            this.Name = "ListWorkForm";
             this.Text = "ListWorkForm";
+            this.Load += new System.EventHandler(this.ListWorkForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewListWork)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dataGridViewListWork;
     }
 }
