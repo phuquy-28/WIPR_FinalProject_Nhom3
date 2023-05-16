@@ -165,7 +165,7 @@ namespace WIPR_FinalProject_Nhom3
                 {
                     MessageBox.Show("IdVehicle has already exist", "Add Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            }
+        }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Add Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -173,6 +173,24 @@ namespace WIPR_FinalProject_Nhom3
 
 
 
+}
+
+        private void buttonAddWork_Click(object sender, EventArgs e)
+        {
+            AddBillForm addBillFrm = new AddBillForm();
+            addBillFrm.idVehicle = textBoxIdVehicle.Text.ToString();
+            if (radioButtonCar.Checked)
+                addBillFrm.typeOfVehicle = "Car";
+            else if(radioButtonMotor.Checked)
+                addBillFrm.typeOfVehicle = "Motor";
+            else
+                addBillFrm.typeOfVehicle = "Bicycle";
+
+            if (radioButtonCar.Checked || radioButtonMotor.Checked)
+                addBillFrm.licensePlate = textBoxLicensePlate.Text.ToString();
+            else
+                addBillFrm.licensePlate = "";
+            addBillFrm.ShowDialog();
         }
     }
 }

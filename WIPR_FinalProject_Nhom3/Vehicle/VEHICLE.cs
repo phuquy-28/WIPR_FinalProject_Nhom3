@@ -25,7 +25,7 @@ namespace WIPR_FinalProject_Nhom3
         public bool IdVehicleIsExist(string idVehicle)
         {
             SqlCommand command = new SqlCommand("select * from vehicle where IdVehicle = @id", mydb.getConnection);
-            command.Parameters.Add("type", SqlDbType.NVarChar).Value = idVehicle;
+            command.Parameters.Add("id", SqlDbType.NVarChar).Value = idVehicle;
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);
@@ -185,6 +185,34 @@ namespace WIPR_FinalProject_Nhom3
         {
             SqlCommand command = new SqlCommand("select * from Vehicle where LisencePlate = @plate", mydb.getConnection);
             command.Parameters.Add("plate", SqlDbType.NVarChar).Value = plate;
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
+
+        public DataTable getCarList()
+        {
+            SqlCommand command = new SqlCommand("select IdVehicle, Type, TimeIn, LisencePlate, BrandName, IdParkPlace, LicensePlatePicture, BrandPicture " +
+                "from Vehicle where type = 'car'", mydb.getConnection);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
+        public DataTable getMotorList()
+        {
+            SqlCommand command = new SqlCommand("select IdVehicle, Type, TimeIn, LisencePlate, BrandName, IdParkPlace, LicensePlatePicture, CustomerPicture " +
+                "from Vehicle where type = 'motor'", mydb.getConnection);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
+        public DataTable getBicycleList()
+        {
+            SqlCommand command = new SqlCommand("select IdVehicle, Type, TimeIn, IdParkPlace, VehiclePicture, CustomerPicture " +
+                "from Vehicle where type = 'bicycle'", mydb.getConnection);
             SqlDataAdapter adapter = new SqlDataAdapter(command);
             DataTable table = new DataTable();
             adapter.Fill(table);

@@ -50,16 +50,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DeleteVehicleForm.cs">
+    <Compile Include="AddBillForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DeleteVehicleForm.Designer.cs">
+    <Compile Include="AddBillForm.Designer.cs">
+      <DependentUpon>AddBillForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Bill.cs" />
+    <Compile Include="SelectParkPlaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectParkPlaceForm.Designer.cs">
+      <DependentUpon>SelectParkPlaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleListForm.Designer.cs">
+      <DependentUpon>VehicleListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle\DeleteVehicleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicle\DeleteVehicleForm.Designer.cs">
       <DependentUpon>DeleteVehicleForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditVehicleForm.cs">
+    <Compile Include="Vehicle\EditVehicleForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditVehicleForm.Designer.cs">
+    <Compile Include="Vehicle\EditVehicleForm.Designer.cs">
       <DependentUpon>EditVehicleForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Registration\ManagerRegisterForm.cs">
@@ -82,7 +101,7 @@
       <DependentUpon>StaffRegisterForm.cs</DependentUpon>
     </Compile>
     <Compile Include="USER.cs" />
-    <Compile Include="VEHICLE.cs" />
+    <Compile Include="Vehicle\VEHICLE.cs" />
     <Compile Include="Work\WORK.cs" />
     <Compile Include="Work\AddWorkForm.cs">
       <SubType>Form</SubType>
@@ -128,10 +147,19 @@
     <Compile Include="Work\UpdateWorkForm.Designer.cs">
       <DependentUpon>UpdateWorkForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DeleteVehicleForm.resx">
+    <EmbeddedResource Include="AddBillForm.resx">
+      <DependentUpon>AddBillForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectParkPlaceForm.resx">
+      <DependentUpon>SelectParkPlaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleListForm.resx">
+      <DependentUpon>VehicleListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicle\DeleteVehicleForm.resx">
       <DependentUpon>DeleteVehicleForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="EditVehicleForm.resx">
+    <EmbeddedResource Include="Vehicle\EditVehicleForm.resx">
       <DependentUpon>EditVehicleForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Registration\ManagerRegisterForm.resx">
@@ -197,6 +225,8 @@
   <ItemGroup>
     <None Include="Resources\parking logo.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Bill\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

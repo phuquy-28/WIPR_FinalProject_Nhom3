@@ -63,5 +63,11 @@ namespace WIPR_FinalProject_Nhom3
             DeleteVehicleForm deletevehicleFrm = new DeleteVehicleForm();
             deletevehicleFrm.ShowDialog();
         }
+
+        private void vehicleListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VehicleListForm vehicleListFrm = new VehicleListForm();
+            vehicleListFrm.ShowDialog();
+        }
     }
 }

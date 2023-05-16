@@ -102,6 +102,7 @@
             this.vehicleListToolStripMenuItem.Name = "vehicleListToolStripMenuItem";
             this.vehicleListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.vehicleListToolStripMenuItem.Text = "Vehicle List";
+            this.vehicleListToolStripMenuItem.Click += new System.EventHandler(this.vehicleListToolStripMenuItem_Click);
             // 
             // wORKToolStripMenuItem
             // 

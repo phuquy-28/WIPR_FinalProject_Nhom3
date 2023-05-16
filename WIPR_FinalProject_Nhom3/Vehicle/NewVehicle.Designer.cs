@@ -48,6 +48,7 @@
             this.labelCustomerOrBrand = new System.Windows.Forms.Label();
             this.textBoxBrand = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.buttonAddWork = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -218,7 +219,7 @@
             // buttonAdd
             // 
             this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAdd.Location = new System.Drawing.Point(375, 363);
+            this.buttonAdd.Location = new System.Drawing.Point(278, 370);
             this.buttonAdd.Name = "buttonAdd";
             this.buttonAdd.Size = new System.Drawing.Size(108, 35);
             this.buttonAdd.TabIndex = 24;
@@ -254,11 +255,23 @@
             this.label6.TabIndex = 25;
             this.label6.Text = "Brand Name:";
             // 
+            // buttonAddWork
+            // 
+            this.buttonAddWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonAddWork.Location = new System.Drawing.Point(537, 370);
+            this.buttonAddWork.Name = "buttonAddWork";
+            this.buttonAddWork.Size = new System.Drawing.Size(108, 35);
+            this.buttonAddWork.TabIndex = 27;
+            this.buttonAddWork.Text = "Add Work";
+            this.buttonAddWork.UseVisualStyleBackColor = true;
+            this.buttonAddWork.Click += new System.EventHandler(this.buttonAddWork_Click);
+            // 
             // AddVehicleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(841, 429);
+            this.Controls.Add(this.buttonAddWork);
             this.Controls.Add(this.textBoxBrand);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.buttonAdd);
@@ -310,6 +323,7 @@
         private System.Windows.Forms.Label labelCustomerOrBrand;
         private System.Windows.Forms.TextBox textBoxBrand;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button buttonAddWork;
     }
 }
 
