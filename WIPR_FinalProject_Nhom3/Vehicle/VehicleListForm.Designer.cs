@@ -103,6 +103,8 @@
             this.dataGridViewVehicleList.Name = "dataGridViewVehicleList";
             this.dataGridViewVehicleList.Size = new System.Drawing.Size(896, 427);
             this.dataGridViewVehicleList.TabIndex = 61;
+            this.dataGridViewVehicleList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewVehicleList_CellContentClick);
+            this.dataGridViewVehicleList.DoubleClick += new System.EventHandler(this.dataGridViewVehicleList_DoubleClick);
             // 
             // VehicleListForm
             // 

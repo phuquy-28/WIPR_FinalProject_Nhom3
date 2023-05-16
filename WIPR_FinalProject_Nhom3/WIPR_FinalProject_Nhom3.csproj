@@ -50,23 +50,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddBillForm.cs">
+    <Compile Include="Vehicle\CheckOutForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddBillForm.Designer.cs">
+    <Compile Include="Vehicle\CheckOutForm.Designer.cs">
+      <DependentUpon>CheckOutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VehicleInforForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VehicleInforForm.Designer.cs">
+      <DependentUpon>VehicleInforForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vehicle\AddBillForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vehicle\AddBillForm.Designer.cs">
       <DependentUpon>AddBillForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Bill.cs" />
-    <Compile Include="SelectParkPlaceForm.cs">
+    <Compile Include="Vehicle\Bill.cs" />
+    <Compile Include="Vehicle\SelectParkPlaceForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelectParkPlaceForm.Designer.cs">
+    <Compile Include="Vehicle\SelectParkPlaceForm.Designer.cs">
       <DependentUpon>SelectParkPlaceForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="VehicleListForm.cs">
+    <Compile Include="Vehicle\VehicleListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VehicleListForm.Designer.cs">
+    <Compile Include="Vehicle\VehicleListForm.Designer.cs">
       <DependentUpon>VehicleListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Vehicle\DeleteVehicleForm.cs">
@@ -147,13 +159,19 @@
     <Compile Include="Work\UpdateWorkForm.Designer.cs">
       <DependentUpon>UpdateWorkForm.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="AddBillForm.resx">
+    <EmbeddedResource Include="Vehicle\CheckOutForm.resx">
+      <DependentUpon>CheckOutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VehicleInforForm.resx">
+      <DependentUpon>VehicleInforForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vehicle\AddBillForm.resx">
       <DependentUpon>AddBillForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SelectParkPlaceForm.resx">
+    <EmbeddedResource Include="Vehicle\SelectParkPlaceForm.resx">
       <DependentUpon>SelectParkPlaceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VehicleListForm.resx">
+    <EmbeddedResource Include="Vehicle\VehicleListForm.resx">
       <DependentUpon>VehicleListForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vehicle\DeleteVehicleForm.resx">

@@ -179,6 +179,9 @@ namespace WIPR_FinalProject_Nhom3
         {
             AddBillForm addBillFrm = new AddBillForm();
             addBillFrm.idVehicle = textBoxIdVehicle.Text.ToString();
+            string dateString = dateTimePickerTimeIn.Value.ToString("dd/MM/yyyy hh:mm:tt");
+            DateTime timeIn = DateTime.ParseExact(dateString, "dd/MM/yyyy hh:mm:tt", CultureInfo.InvariantCulture);
+            addBillFrm.TimeIn = timeIn;
             if (radioButtonCar.Checked)
                 addBillFrm.typeOfVehicle = "Car";
             else if(radioButtonMotor.Checked)
@@ -190,6 +193,7 @@ namespace WIPR_FinalProject_Nhom3
                 addBillFrm.licensePlate = textBoxLicensePlate.Text.ToString();
             else
                 addBillFrm.licensePlate = "";
+
             addBillFrm.ShowDialog();
         }
     }

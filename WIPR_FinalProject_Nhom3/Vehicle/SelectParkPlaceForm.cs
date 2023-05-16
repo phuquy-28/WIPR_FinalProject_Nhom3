@@ -47,9 +47,10 @@ namespace WIPR_FinalProject_Nhom3
 
         private void buttonSelect_Click(object sender, EventArgs e)
         {
-            if (dataGridViewParkPlace.CurrentRow.Cells["IdParkplace"].Value != System.DBNull.Value)
+            if (dataGridViewParkPlace.CurrentRow.Cells["IdParkplace"].Value != System.DBNull.Value && textBoxTime.Text.ToString() != "")
             {
                 string idPark = dataGridViewParkPlace.CurrentRow.Cells["IdParkplace"].Value.ToString();
+                int time = Convert.ToInt32(textBoxTime.Text);
                 SqlCommand cmd_update_parkplace = new SqlCommand("update parkplace set idvehicle = @idvehi, lisenceplate = @plate, state = 'parked' " +
                     "where idparkplace = @idpark", mydb.getConnection);
                 cmd_update_parkplace.Parameters.Add("idvehi", SqlDbType.NVarChar).Value = idVehicle;
@@ -59,12 +60,17 @@ namespace WIPR_FinalProject_Nhom3
                 SqlCommand cmd_update_capacity = new SqlCommand("update capacity set currentcapacity += 1 where typeofcar = @type", mydb.getConnection);
                 cmd_update_capacity.Parameters.Add("type", SqlDbType.NVarChar).Value = typeOfVehicle;
 
-                if (bill.addDetailBill(idBill, idWork, price))
+                SqlCommand cmd_update_vehicle = new SqlCommand("update vehicle set idparkplace = @idpark where idvehicle = @idvehi", mydb.getConnection);
+                cmd_update_vehicle.Parameters.Add("idpark", SqlDbType.NVarChar).Value = idPark;
+                cmd_update_vehicle.Parameters.Add("idvehi", SqlDbType.NVarChar).Value = idVehicle;
+
+                if (bill.addDetailBill(idBill, idWork, price, time))
                 {
                     mydb.openConnection();
 
                     cmd_update_parkplace.ExecuteNonQuery();
                     cmd_update_capacity.ExecuteNonQuery();
+                    cmd_update_vehicle.ExecuteNonQuery();
                     mydb.closeConnection();
                     MessageBox.Show("Adding work successfully", "Add Work", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

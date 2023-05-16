@@ -80,7 +80,7 @@ namespace WIPR_FinalProject_Nhom3
                 float.TryParse(textBoxPrice.Text, out price);
                 int idTypeOfWork = Convert.ToInt32(comboBoxTypeWork.SelectedValue.ToString());
                 if (radioButtonCar.Checked == true) { typeOfCar = "Car"; }
-                else if (radioButtonMotobike.Checked == true) { typeOfCar = "Motobike"; }
+                else if (radioButtonMotobike.Checked == true) { typeOfCar = "Motor"; }
                 else { typeOfCar = "Bicycle"; }
                 if (work.editWork(idWork, price, idTypeOfWork, typeOfCar))
                 {

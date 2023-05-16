@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace WIPR_FinalProject_Nhom3
 {
-    public partial class EditVehicleForm : Form
+    public partial class VehicleInforForm : Form
     {
-        public EditVehicleForm()
+        public VehicleInforForm()
         {
             InitializeComponent();
             dateTimePickerTimeIn.Format = DateTimePickerFormat.Custom;
@@ -22,6 +22,7 @@ namespace WIPR_FinalProject_Nhom3
             pictureBox1.Image = null;
             pictureBox2.Image = null;
         }
+
         VEHICLE vehicle = new VEHICLE();
 
         private void buttonFindById_Click(object sender, EventArgs e)
@@ -115,11 +116,11 @@ namespace WIPR_FinalProject_Nhom3
                     }
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
         }
 
         private void buttonFindByPlate_Click(object sender, EventArgs e)
@@ -256,95 +257,15 @@ namespace WIPR_FinalProject_Nhom3
             }
         }
 
-        private void buttonEdit_Click(object sender, EventArgs e)
+        private void buttonCheckOut_Click(object sender, EventArgs e)
         {
-            string IdVehicle = textBoxIdVehicle.Text.ToString();
-            string type;
-            if (radioButtonBicycle.Checked)
-                type = radioButtonBicycle.Text.ToString();
-            else if (radioButtonMotor.Checked)
-                type = radioButtonMotor.Text.ToString();
-            else
-                type = radioButtonCar.Text.ToString();
+            CheckOutForm checkOutFrm = new CheckOutForm();
             string dateString = dateTimePickerTimeIn.Value.ToString("dd/MM/yyyy hh:mm:tt");
             DateTime timeIn = DateTime.ParseExact(dateString, "dd/MM/yyyy hh:mm:tt", CultureInfo.InvariantCulture);
-            string plate = textBoxLicensePlate.Text.ToString();
-            string brand = textBoxBrand.Text.ToString();
-
-            MemoryStream platePic = new MemoryStream();
-            MemoryStream brandPic = new MemoryStream();
-            MemoryStream cusPic = new MemoryStream();
-            MemoryStream vehiclePic = new MemoryStream();
-            if (radioButtonCar.Checked)
-            {
-                pictureBox1.Image.Save(platePic, pictureBox1.Image.RawFormat);
-                pictureBox2.Image.Save(brandPic, pictureBox2.Image.RawFormat);
-            }
-            else if (radioButtonMotor.Checked)
-            {
-                pictureBox1.Image.Save(platePic, pictureBox1.Image.RawFormat);
-                pictureBox2.Image.Save(cusPic, pictureBox2.Image.RawFormat);
-            }
-            else
-            {
-                pictureBox1.Image.Save(vehiclePic, pictureBox1.Image.RawFormat);
-                pictureBox2.Image.Save(cusPic, pictureBox2.Image.RawFormat);
-            }
-
-            if (radioButtonCar.Checked)
-            {
-                if (vehicle.editVehicle(type, IdVehicle, timeIn, platePic, brandPic, plate, brand))
-                {
-                    MessageBox.Show("Editing successfully", "Edit Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Editing fail", "Edit Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else if (radioButtonMotor.Checked)
-            {
-                if (vehicle.editVehicle(type, IdVehicle, timeIn, platePic, cusPic, plate, brand))
-                {
-                    MessageBox.Show("Editing successfully", "Edit Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Editing fail", "Edit Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                if (vehicle.editVehicle(type, IdVehicle, timeIn, vehiclePic, cusPic))
-                {
-                    MessageBox.Show("Editing successfully", "Edit Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Editing fail", "Edit Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-        }
-
-        private void buttonAddWork_Click(object sender, EventArgs e)
-        {
-            AddBillForm addBillFrm = new AddBillForm();
-            addBillFrm.idVehicle = textBoxIdVehicle.Text.ToString();
-            string dateString = dateTimePickerTimeIn.Value.ToString("dd/MM/yyyy hh:mm:tt");
-            DateTime timeIn = DateTime.ParseExact(dateString, "dd/MM/yyyy hh:mm:tt", CultureInfo.InvariantCulture);
-            addBillFrm.TimeIn = timeIn;
-            if (radioButtonCar.Checked)
-                addBillFrm.typeOfVehicle = "Car";
-            else if (radioButtonMotor.Checked)
-                addBillFrm.typeOfVehicle = "Motor";
-            else
-                addBillFrm.typeOfVehicle = "Bicycle";
-
-            if (radioButtonCar.Checked || radioButtonMotor.Checked)
-                addBillFrm.licensePlate = textBoxLicensePlate.Text.ToString();
-            else
-                addBillFrm.licensePlate = "";
-            addBillFrm.ShowDialog();
+            checkOutFrm.TimeIn = timeIn;
+            checkOutFrm.IdVehicle = textBoxIdVehicle.Text;
+            checkOutFrm.Plate = textBoxLicensePlate.Text;
+            checkOutFrm.ShowDialog();
         }
     }
 }

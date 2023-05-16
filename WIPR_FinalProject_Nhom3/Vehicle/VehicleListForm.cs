@@ -110,5 +110,17 @@ namespace WIPR_FinalProject_Nhom3
         {
             loadBicycleList();
         }
+
+        private void dataGridViewVehicleList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+           
+        }
+
+        private void dataGridViewVehicleList_DoubleClick(object sender, EventArgs e)
+        {
+            VehicleInforForm checkOutFrm = new VehicleInforForm();
+            checkOutFrm.textBoxIdVehicle.Text = dataGridViewVehicleList.CurrentRow.Cells["IdVehicle"].Value.ToString();
+            checkOutFrm.ShowDialog();
+        }
     }
 }

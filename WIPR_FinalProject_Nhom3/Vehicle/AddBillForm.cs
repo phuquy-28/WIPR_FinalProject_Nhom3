@@ -15,6 +15,7 @@ namespace WIPR_FinalProject_Nhom3
         public string idVehicle { get; set; }
         public string typeOfVehicle { get; set; }
         public string licensePlate { get; set; }
+        public DateTime TimeIn { get; set; }
         public AddBillForm()
         {
             InitializeComponent();
@@ -35,8 +36,6 @@ namespace WIPR_FinalProject_Nhom3
 
         private void buttonAddBill_Click(object sender, EventArgs e)
         {
-            
-
             string idBill = textBoxIdBill.Text.ToString();
             if (!verif())
             {
@@ -45,7 +44,7 @@ namespace WIPR_FinalProject_Nhom3
             }
             if (!bill.IdBillIsExist(idBill))
             {
-                if (bill.addBill(idBill, idVehicle, typeOfVehicle, licensePlate))
+                if (bill.addBill(idBill, idVehicle, typeOfVehicle, TimeIn, licensePlate))
                 {
                     MessageBox.Show("Adding Bill successfully", "Add Bill", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     textBoxIdBill.Enabled = false;
@@ -94,6 +93,14 @@ namespace WIPR_FinalProject_Nhom3
                     selectParkPlaceFrm.typeOfVehicle = selectedRow["TypeOfCar"].ToString();
                     selectParkPlaceFrm.idVehicle = idVehicle;
                     selectParkPlaceFrm.licensePlate = licensePlate;
+                    // Thêm bản sao này vào ListBox
+                    listBoxSelect.Items.Add(selectedRow);
+                    listBoxSelect.ValueMember = "IdWork";
+                    listBoxSelect.DisplayMember = "name";
+
+                    // Lấy ra DataTable đã liên kết với ListBox
+                    DataTable dt = (DataTable)listBoxAvail.DataSource;
+                    dt.Rows.Remove(selectedRow.Row);
                     selectParkPlaceFrm.ShowDialog();
                     return;
                 }

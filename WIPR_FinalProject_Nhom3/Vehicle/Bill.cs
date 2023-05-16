@@ -11,14 +11,15 @@ namespace WIPR_FinalProject_Nhom3
     internal class Bill
     {
         MY_DB mydb = new MY_DB();
-        public bool addBill(string idBill, string idVehicle, string typeOfVehicle, string licencePlate = "")
+        public bool addBill(string idBill, string idVehicle, string typeOfVehicle, DateTime timein, string licencePlate = "")
         {
-            SqlCommand command = new SqlCommand("insert into Bill (Id, IdVehicle, TypeOfVehicle, LisencePlate, State) values (@idBill, @idVehi, @type, @plate, @state)", mydb.getConnection);
+            SqlCommand command = new SqlCommand("insert into Bill (Id, IdVehicle, TypeOfVehicle, LisencePlate, TimeIn, State) values (@idBill, @idVehi, @type, @plate, @time, @state)", mydb.getConnection);
             command.Parameters.Add("idBill", SqlDbType.NVarChar).Value = idBill;
             command.Parameters.Add("idVehi", SqlDbType.NVarChar).Value = idVehicle;
             command.Parameters.Add("type", SqlDbType.NVarChar).Value = typeOfVehicle;
             command.Parameters.Add("plate", SqlDbType.NVarChar).Value = licencePlate;
             command.Parameters.Add("state", SqlDbType.NVarChar).Value = "Temporary";
+            command.Parameters.Add("time", SqlDbType.DateTime).Value = timein;
 
             mydb.openConnection();
 
@@ -59,18 +60,20 @@ namespace WIPR_FinalProject_Nhom3
             return table;
         }
 
-        public bool addDetailBill(string idBill, string idWork, double price, string description = "")
+        public bool addDetailBill(string idBill, string idWork, double price, int time = 0, string description = "")
         {
-            SqlCommand command_insert = new SqlCommand("insert into DetailBill values(@idbill, @idwork, @price, @des)", mydb.getConnection);
+            SqlCommand command_insert = new SqlCommand("insert into DetailBill values(@idbill, @idwork, @price, @time, @des)", mydb.getConnection);
             command_insert.Parameters.Add("idbill", SqlDbType.NVarChar).Value = idBill;
             command_insert.Parameters.Add("idwork", SqlDbType.NVarChar).Value = idWork;
-            command_insert.Parameters.Add("price", SqlDbType.Float).Value = price;
+            command_insert.Parameters.Add("price", SqlDbType.Float).Value = (float)price;
+            command_insert.Parameters.Add("time", SqlDbType.Float).Value = time;
             command_insert.Parameters.Add("des", SqlDbType.NVarChar).Value = description;
 
             SqlCommand command_update = new SqlCommand("UPDATE Bill " +
-                "SET Total = ISNULL(Total, 0) + @price " +
+                "SET Total = ISNULL(Total, 0) + (@price * @time) " +
                 "WHERE Id = @id", mydb.getConnection);
             command_update.Parameters.Add("price", SqlDbType.Float).Value = (float)price;
+            command_update.Parameters.Add("time", SqlDbType.Float).Value = time;
             command_update.Parameters.Add("id", SqlDbType.NVarChar).Value = idBill;
 
             mydb.openConnection();
