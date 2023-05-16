@@ -45,5 +45,23 @@ namespace WIPR_FinalProject_Nhom3
             ListWorkForm listWorkF = new ListWorkForm();
             listWorkF.ShowDialog();
         }
+
+        private void addVehicleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddVehicleForm addVehicleFrm = new AddVehicleForm();
+            addVehicleFrm.ShowDialog();
+        }
+
+        private void editVehicleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EditVehicleForm editVehicleFrm = new EditVehicleForm();
+            editVehicleFrm.ShowDialog();
+        }
+
+        private void deleteVehicleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DeleteVehicleForm deletevehicleFrm = new DeleteVehicleForm();
+            deletevehicleFrm.ShowDialog();
+        }
     }
 }

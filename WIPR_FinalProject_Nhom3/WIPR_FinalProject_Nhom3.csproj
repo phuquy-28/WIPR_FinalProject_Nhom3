@@ -50,6 +50,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DeleteVehicleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DeleteVehicleForm.Designer.cs">
+      <DependentUpon>DeleteVehicleForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditVehicleForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditVehicleForm.Designer.cs">
+      <DependentUpon>EditVehicleForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Registration\ManagerRegisterForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -116,6 +128,12 @@
     <Compile Include="Work\UpdateWorkForm.Designer.cs">
       <DependentUpon>UpdateWorkForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="DeleteVehicleForm.resx">
+      <DependentUpon>DeleteVehicleForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditVehicleForm.resx">
+      <DependentUpon>EditVehicleForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Registration\ManagerRegisterForm.resx">
       <DependentUpon>ManagerRegisterForm.cs</DependentUpon>
     </EmbeddedResource>

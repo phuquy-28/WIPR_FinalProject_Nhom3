@@ -27,7 +27,7 @@ namespace WIPR_FinalProject_Nhom3
 
         private void radioButtonCar_CheckedChanged(object sender, EventArgs e)
         {
-            labelImageOrPlate.Text = "Car Image:";
+            labelImageOrPlate.Text = "Plate Image:";
             labelCustomerOrBrand.Text = "Brand Image:";
             textBoxLicensePlate.Enabled = true;
             textBoxBrand.Enabled = true;
@@ -90,73 +90,89 @@ namespace WIPR_FinalProject_Nhom3
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            string IdVehicle = textBoxIdVehicle.Text.ToString();
-            string type;
-            if (radioButtonBicycle.Checked)
-                type = radioButtonBicycle.Text.ToString();
-            else if (radioButtonMotor.Checked)
-                type = radioButtonMotor.Text.ToString();
-            else
-                type = radioButtonCar.Text.ToString();
-            string dateString = dateTimePickerTimeIn.Value.ToString("dd/MM/yyyy hh:mm:tt");
-            DateTime timeIn = DateTime.ParseExact(dateString, "dd/MM/yyyy hh:mm:tt", CultureInfo.InvariantCulture);
-            string plate = textBoxLicensePlate.Text.ToString();
-            string brand = textBoxBrand.Text.ToString();
+            try
+            {
+                string IdVehicle = textBoxIdVehicle.Text.ToString();
+                string type;
+                if (radioButtonBicycle.Checked)
+                    type = radioButtonBicycle.Text.ToString();
+                else if (radioButtonMotor.Checked)
+                    type = radioButtonMotor.Text.ToString();
+                else
+                    type = radioButtonCar.Text.ToString();
+                string dateString = dateTimePickerTimeIn.Value.ToString("dd/MM/yyyy hh:mm:tt");
+                DateTime timeIn = DateTime.ParseExact(dateString, "dd/MM/yyyy hh:mm:tt", CultureInfo.InvariantCulture);
+                string plate = textBoxLicensePlate.Text.ToString();
+                string brand = textBoxBrand.Text.ToString();
 
-            MemoryStream platePic = new MemoryStream();
-            MemoryStream brandPic = new MemoryStream();
-            MemoryStream cusPic = new MemoryStream();
-            MemoryStream vehiclePic = new MemoryStream();
-            if (radioButtonCar.Checked)
-            {
-                pictureBox1.Image.Save(platePic, pictureBox1.Image.RawFormat);
-                pictureBox2.Image.Save(brandPic, pictureBox2.Image.RawFormat);
+                MemoryStream platePic = new MemoryStream();
+                MemoryStream brandPic = new MemoryStream();
+                MemoryStream cusPic = new MemoryStream();
+                MemoryStream vehiclePic = new MemoryStream();
+                if (radioButtonCar.Checked)
+                {
+                    pictureBox1.Image.Save(platePic, pictureBox1.Image.RawFormat);
+                    pictureBox2.Image.Save(brandPic, pictureBox2.Image.RawFormat);
+                }
+                else if (radioButtonMotor.Checked)
+                {
+                    pictureBox1.Image.Save(platePic, pictureBox1.Image.RawFormat);
+                    pictureBox2.Image.Save(cusPic, pictureBox2.Image.RawFormat);
+                }
+                else
+                {
+                    pictureBox1.Image.Save(vehiclePic, pictureBox1.Image.RawFormat);
+                    pictureBox2.Image.Save(cusPic, pictureBox2.Image.RawFormat);
+                }
+
+                if (!vehicle.IdVehicleIsExist(IdVehicle))
+                {
+                    if (radioButtonCar.Checked)
+                    {
+                        if (vehicle.insertVehicle(type, IdVehicle, timeIn, platePic, brandPic, plate, brand))
+                        {
+                            MessageBox.Show("Adding successfully", "Add Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Adding fail", "Add Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else if (radioButtonMotor.Checked)
+                    {
+                        if (vehicle.insertVehicle(type, IdVehicle, timeIn, platePic, cusPic, plate, brand))
+                        {
+                            MessageBox.Show("Adding successfully", "Add Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Adding fail", "Add Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                    else
+                    {
+                        if (vehicle.insertVehicle(type, IdVehicle, timeIn, vehiclePic, cusPic))
+                        {
+                            MessageBox.Show("Adding successfully", "Add Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Adding fail", "Add Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("IdVehicle has already exist", "Add Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else if (radioButtonMotor.Checked)
+            catch(Exception ex)
             {
-                pictureBox1.Image.Save(platePic, pictureBox1.Image.RawFormat);
-                pictureBox2.Image.Save(cusPic, pictureBox2.Image.RawFormat);
-            }
-            else
-            {
-                pictureBox1.Image.Save(vehiclePic, pictureBox1.Image.RawFormat);
-                pictureBox2.Image.Save(cusPic, pictureBox2.Image.RawFormat);
+                MessageBox.Show(ex.Message, "Add Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            //Thêm xe
-            if (radioButtonCar.Checked)
-            {
-                if (vehicle.insertVehicle(type, IdVehicle, timeIn, platePic, brandPic, plate, brand))
-                {
-                    MessageBox.Show("Adding successfully", "Add Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Adding fail", "Add Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else if (radioButtonMotor.Checked)
-            {
-                if (vehicle.insertVehicle(type, IdVehicle, timeIn, platePic, cusPic, plate, brand))
-                {
-                    MessageBox.Show("Adding successfully", "Add Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Adding fail", "Add Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
-            else
-            {
-                if (vehicle.insertVehicle(type, IdVehicle, timeIn, vehiclePic, cusPic))
-                {
-                    MessageBox.Show("Adding successfully", "Add Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                }
-                else
-                {
-                    MessageBox.Show("Adding fail", "Add Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-            }
+
+
         }
     }
 }
