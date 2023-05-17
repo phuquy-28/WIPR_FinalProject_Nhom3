@@ -121,6 +121,7 @@ namespace WIPR_FinalProject_Nhom3
             VehicleInforForm checkOutFrm = new VehicleInforForm();
             checkOutFrm.textBoxIdVehicle.Text = dataGridViewVehicleList.CurrentRow.Cells["IdVehicle"].Value.ToString();
             checkOutFrm.ShowDialog();
+            VehicleListForm_Load(null, null);
         }
     }
 }

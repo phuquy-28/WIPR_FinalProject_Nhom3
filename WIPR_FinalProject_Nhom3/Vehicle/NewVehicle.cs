@@ -23,6 +23,7 @@ namespace WIPR_FinalProject_Nhom3
             dateTimePickerTimeIn.CustomFormat = "dd/MM/yy hh:mm:tt";
             pictureBox1.Image = null;
             pictureBox2.Image = null;
+            buttonAddWork.Enabled = false;
         }
 
         private void radioButtonCar_CheckedChanged(object sender, EventArgs e)
@@ -132,6 +133,7 @@ namespace WIPR_FinalProject_Nhom3
                         if (vehicle.insertVehicle(type, IdVehicle, timeIn, platePic, brandPic, plate, brand))
                         {
                             MessageBox.Show("Adding successfully", "Add Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            buttonAddWork.Enabled = true;
                         }
                         else
                         {
@@ -143,6 +145,7 @@ namespace WIPR_FinalProject_Nhom3
                         if (vehicle.insertVehicle(type, IdVehicle, timeIn, platePic, cusPic, plate, brand))
                         {
                             MessageBox.Show("Adding successfully", "Add Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            buttonAddWork.Enabled = true;
                         }
                         else
                         {
@@ -154,6 +157,7 @@ namespace WIPR_FinalProject_Nhom3
                         if (vehicle.insertVehicle(type, IdVehicle, timeIn, vehiclePic, cusPic))
                         {
                             MessageBox.Show("Adding successfully", "Add Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            buttonAddWork.Enabled = true;
                         }
                         else
                         {
