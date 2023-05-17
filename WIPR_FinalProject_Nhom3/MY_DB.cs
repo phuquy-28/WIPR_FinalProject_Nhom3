@@ -10,7 +10,7 @@ namespace WIPR_FinalProject_Nhom3
 {
     internal class MY_DB
     {
-        SqlConnection con = new SqlConnection(@"Data Source=DESKTOP-2CMFK1I\SQLEXPRESS;Initial Catalog=PARKING_LOT;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-TSVFN4HJ;Initial Catalog=PARKING_LOT;Integrated Security=True");
 
         // get the connection
         public SqlConnection getConnection
