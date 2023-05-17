@@ -109,5 +109,10 @@ namespace WIPR_FinalProject_Nhom3
         {
 
         }
+
+        private void manageEmployeesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

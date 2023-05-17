@@ -1,6 +1,6 @@
 ﻿namespace WIPR_FinalProject_Nhom3
 {
-    partial class AddParkPlaceForm
+    partial class ManageEmployeeForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // AddParkPlaceForm
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(441, 450);
-            this.Name = "AddParkPlaceForm";
-            this.Text = "AddParkPlaceForm";
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "ManageEmployeeForm";
         }
 
         #endregion
