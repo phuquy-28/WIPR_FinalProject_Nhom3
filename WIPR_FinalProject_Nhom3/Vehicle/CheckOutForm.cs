@@ -23,6 +23,7 @@ namespace WIPR_FinalProject_Nhom3
         public string IdVehicle { get; set; }
         public string Plate { get; set; }
         MY_DB mydb = new MY_DB();
+        VEHICLE vehicle = new VEHICLE();
 
         private void CheckOutForm_Load(object sender, EventArgs e)
         {
@@ -66,7 +67,8 @@ namespace WIPR_FinalProject_Nhom3
             if (idWork_int <= 3)
             {
                 TimeSpan timeSpan = timeOut - timeIn;
-                int hours = timeSpan.Hours;
+                int hours = timeSpan.Days * 24 + timeSpan.Hours;
+                if (timeSpan.Minutes > 0) hours++;
                 if (hours - time > 24)
                 {
                     idWork_int += 3;
@@ -77,6 +79,7 @@ namespace WIPR_FinalProject_Nhom3
             {
                 TimeSpan timeSpan = timeOut - timeIn;
                 int days = timeSpan.Days;
+                if (timeSpan.Hours > 0 || timeSpan.Minutes > 0) days++;
                 if (days - time > 1)
                 {
                     idWork_int += 3;
@@ -87,6 +90,7 @@ namespace WIPR_FinalProject_Nhom3
             {
                 TimeSpan timeSpan = timeOut - timeIn;
                 int days = timeSpan.Days;
+                if (timeSpan.Hours > 0 || timeSpan.Minutes > 0) days++;
                 if (days - time * 7 > 10 && days - time * 7 < 30)
                 {
                     idWork_int += 3;
@@ -134,7 +138,7 @@ namespace WIPR_FinalProject_Nhom3
             if (fine > 0)
             {
                 string fine_string = fine.ToString() + " (overtime)";
-                SqlCommand command = new SqlCommand("update bill set total = @newTotal, set description = @fineString, set state = 'Finished' where idvehicle = @id and state = 'temporary'", mydb.getConnection);
+                SqlCommand command = new SqlCommand("update bill set total = @newTotal, description = @fineString, state = 'Finished' where idvehicle = @id and state = 'temporary'", mydb.getConnection);
                 command.Parameters.Add("id", SqlDbType.NVarChar).Value = IdVehicle;
                 command.Parameters.Add("newTotal", SqlDbType.Float).Value = total;
                 command.Parameters.Add("fineString", SqlDbType.NVarChar).Value = fine_string;
@@ -189,6 +193,7 @@ namespace WIPR_FinalProject_Nhom3
             float total = fine + charge;
             labelTotal.Text = total.ToString();
             finishBill(IdVehicle, total, fine);
+            vehicle.deleteVehicle(IdVehicle);
 
             dataGridViewDetail.DataSource = table;
             dataGridViewDetail.Columns["id"].HeaderText = "Id Bill";

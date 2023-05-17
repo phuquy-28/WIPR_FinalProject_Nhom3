@@ -60,7 +60,7 @@ namespace WIPR_FinalProject_Nhom3
             return table;
         }
 
-        public bool addDetailBill(string idBill, string idWork, double price, int time = 0, string description = "")
+        public bool addDetailBill(string idBill, string idWork, double price, int time = 1, string description = "")
         {
             SqlCommand command_insert = new SqlCommand("insert into DetailBill values(@idbill, @idwork, @price, @time, @des)", mydb.getConnection);
             command_insert.Parameters.Add("idbill", SqlDbType.NVarChar).Value = idBill;
