@@ -92,17 +92,17 @@ namespace WIPR_FinalProject_Nhom3
 
         private void addEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            AddEmployeeForm addEmployeeF = new AddEmployeeForm(); addEmployeeF.ShowDialog();
         }
 
         private void editEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            EditEmployeeForm editEmployeeF = new EditEmployeeForm(); editEmployeeF.ShowDialog();
         }
 
         private void removeEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            RemoveEmployeeForm removeEmployeeF = new RemoveEmployeeForm(); removeEmployeeF.ShowDialog();
         }
 
         private void employeeListToolStripMenuItem_Click(object sender, EventArgs e)

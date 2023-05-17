@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EMPLOYEE.cs" />
     <Compile Include="Employee\AddEmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -68,6 +69,8 @@
     <Compile Include="Employee\EmployeeListForm.Designer.cs">
       <DependentUpon>EmployeeListForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GLOBALS.cs" />
+    <Compile Include="GROUP.cs" />
     <Compile Include="Manager\ManageEmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +107,12 @@
     </Compile>
     <Compile Include="Employee\RemoveEmployeeForm.Designer.cs">
       <DependentUpon>RemoveEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SelectEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SelectEmployeeForm.Designer.cs">
+      <DependentUpon>SelectEmployeeForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Vehicle\CheckOutForm.cs">
       <SubType>Form</SubType>
@@ -214,8 +223,20 @@
     <Compile Include="Work\UpdateWorkForm.Designer.cs">
       <DependentUpon>UpdateWorkForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Employee\AddEmployeeForm.resx">
+      <DependentUpon>AddEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\EditEmployeeForm.resx">
+      <DependentUpon>EditEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee\RemoveEmployeeForm.resx">
+      <DependentUpon>RemoveEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ParkPlace\AddParkPlaceForm.resx">
       <DependentUpon>AddParkPlaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SelectEmployeeForm.resx">
+      <DependentUpon>SelectEmployeeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vehicle\CheckOutForm.resx">
       <DependentUpon>CheckOutForm.cs</DependentUpon>
