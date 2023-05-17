@@ -69,5 +69,45 @@ namespace WIPR_FinalProject_Nhom3
             VehicleListForm vehicleListFrm = new VehicleListForm();
             vehicleListFrm.ShowDialog();
         }
+
+        private void pARKPLACEToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void removeParkPlaceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewParkPlaceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewParkPlaceToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void addEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void removeEmployeeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void employeeListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

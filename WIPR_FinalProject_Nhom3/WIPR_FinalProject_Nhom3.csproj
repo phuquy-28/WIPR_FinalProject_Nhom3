@@ -50,16 +50,65 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Employee\AddEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\AddEmployeeForm.Designer.cs">
+      <DependentUpon>AddEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\EditEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\EditEmployeeForm.Designer.cs">
+      <DependentUpon>EditEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\EmployeeListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\EmployeeListForm.Designer.cs">
+      <DependentUpon>EmployeeListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PARKPLACE.cs" />
+    <Compile Include="ParkPlace\AddParkPlaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParkPlace\AddParkPlaceForm.Designer.cs">
+      <DependentUpon>AddParkPlaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParkPlace\EditParkPlaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParkPlace\EditParkPlaceForm.Designer.cs">
+      <DependentUpon>EditParkPlaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParkPlace\ParkPlaceListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParkPlace\ParkPlaceListForm.Designer.cs">
+      <DependentUpon>ParkPlaceListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParkPlace\RemoveParkPlaceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParkPlace\RemoveParkPlaceForm.Designer.cs">
+      <DependentUpon>RemoveParkPlaceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee\RemoveEmployeeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee\RemoveEmployeeForm.Designer.cs">
+      <DependentUpon>RemoveEmployeeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Vehicle\CheckOutForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Vehicle\CheckOutForm.Designer.cs">
       <DependentUpon>CheckOutForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="VehicleInforForm.cs">
+    <Compile Include="Vehicle\VehicleInforForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="VehicleInforForm.Designer.cs">
+    <Compile Include="Vehicle\VehicleInforForm.Designer.cs">
       <DependentUpon>VehicleInforForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Vehicle\AddBillForm.cs">
@@ -112,7 +161,7 @@
     <Compile Include="Registration\StaffRegisterForm.Designer.cs">
       <DependentUpon>StaffRegisterForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="USER.cs" />
+    <Compile Include="ParkPlace\USER.cs" />
     <Compile Include="Vehicle\VEHICLE.cs" />
     <Compile Include="Work\WORK.cs" />
     <Compile Include="Work\AddWorkForm.cs">
@@ -162,7 +211,7 @@
     <EmbeddedResource Include="Vehicle\CheckOutForm.resx">
       <DependentUpon>CheckOutForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="VehicleInforForm.resx">
+    <EmbeddedResource Include="Vehicle\VehicleInforForm.resx">
       <DependentUpon>VehicleInforForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vehicle\AddBillForm.resx">
@@ -244,7 +293,7 @@
     <None Include="Resources\parking logo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Bill\" />
+    <Folder Include="Income\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

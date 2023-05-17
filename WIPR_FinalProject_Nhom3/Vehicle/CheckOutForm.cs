@@ -44,6 +44,7 @@ namespace WIPR_FinalProject_Nhom3
             checkOut();
         }
 
+
         public float getPriceByIdWork(string idwork)
         {
             SqlCommand command = new SqlCommand("select price from work where idwork = @id", mydb.getConnection);
