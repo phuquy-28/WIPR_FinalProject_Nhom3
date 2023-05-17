@@ -120,12 +120,14 @@ namespace WIPR_FinalProject_Nhom3
 
         private void addContractToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            AddContractForm addContractFrm = new AddContractForm();
+            addContractFrm.ShowDialog();
         }
 
         private void editContractToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            EditContractForm editContractFrm = new EditContractForm();
+            editContractFrm.ShowDialog();
         }
 
         private void deleteContractToolStripMenuItem_Click(object sender, EventArgs e)
@@ -140,7 +142,8 @@ namespace WIPR_FinalProject_Nhom3
 
         private void viewIncomeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            ViewIncomeForm viewIncomeFrm = new ViewIncomeForm();
+            viewIncomeFrm.ShowDialog();
         }
 
         private void statisticToolStripMenuItem_Click(object sender, EventArgs e)
