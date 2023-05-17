@@ -81,6 +81,12 @@
     <Compile Include="Contract\EditContractForm.Designer.cs">
       <DependentUpon>EditContractForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Contract\DetailContractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\DetailContractForm.Designer.cs">
+      <DependentUpon>DetailContractForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EMPLOYEE.cs" />
     <Compile Include="Employee\AddEmployeeForm.cs">
       <SubType>Form</SubType>
@@ -145,10 +151,10 @@
     <Compile Include="Employee\RemoveEmployeeForm.Designer.cs">
       <DependentUpon>RemoveEmployeeForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="SelectContractForm.cs">
+    <Compile Include="Contract\SelectContractForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SelectContractForm.Designer.cs">
+    <Compile Include="Contract\SelectContractForm.Designer.cs">
       <DependentUpon>SelectContractForm.cs</DependentUpon>
     </Compile>
     <Compile Include="SelectEmployeeForm.cs">
@@ -278,6 +284,15 @@
     <EmbeddedResource Include="Contract\AddDetailContractForm.resx">
       <DependentUpon>AddDetailContractForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Contract\ContractList.resx">
+      <DependentUpon>ContractList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\DeleteContractForm.resx">
+      <DependentUpon>DeleteContractForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contract\DetailContractForm.resx">
+      <DependentUpon>DetailContractForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Contract\EditContractForm.resx">
       <DependentUpon>EditContractForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -305,7 +320,7 @@
     <EmbeddedResource Include="ParkPlace\RemoveParkPlaceForm.resx">
       <DependentUpon>RemoveParkPlaceForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="SelectContractForm.resx">
+    <EmbeddedResource Include="Contract\SelectContractForm.resx">
       <DependentUpon>SelectContractForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectEmployeeForm.resx">

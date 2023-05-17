@@ -132,12 +132,14 @@ namespace WIPR_FinalProject_Nhom3
 
         private void deleteContractToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            DeleteContractForm deleteContractFrm = new DeleteContractForm(); 
+            deleteContractFrm.ShowDialog();
         }
 
         private void contractListToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            ContractList contractListFrm = new ContractList();
+            contractListFrm.ShowDialog();
         }
 
         private void viewIncomeToolStripMenuItem_Click(object sender, EventArgs e)

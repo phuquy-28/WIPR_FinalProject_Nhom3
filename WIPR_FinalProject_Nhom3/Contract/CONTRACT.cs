@@ -180,5 +180,55 @@ namespace WIPR_FinalProject_Nhom3
                 return false;
             }
         }
+
+        public bool deleteContract(string contractId)
+        {
+            SqlCommand command = new SqlCommand("delete from contract where idcontract = @idcon", mydb.getConnection);
+            command.Parameters.Add("idcon", SqlDbType.NVarChar).Value = contractId;
+            mydb.openConnection();
+            if (command.ExecuteNonQuery() == 1)
+            {
+                mydb.closeConnection();
+                return true;
+            }
+            else
+            {
+                mydb.closeConnection();
+                return false;
+            }
+        }
+
+        public DataTable getListContract()
+        {
+            SqlCommand command = new SqlCommand("select * from contract", mydb.getConnection);
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
+
+        public DataTable getListContractUseRange(DateTime start, DateTime end)
+        {
+            SqlCommand command = new SqlCommand("SELECT * " +
+                "FROM contract " +
+                "WHERE CONVERT(date, datecreate) BETWEEN @startDate AND @endDate", mydb.getConnection);
+            command.Parameters.Add("startDate", SqlDbType.DateTime).Value = start.Date;
+            command.Parameters.Add("endDate", SqlDbType.DateTime).Value = end.Date;
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
+
+
+        public DataTable getDetailContractByID(string idcon)
+        {
+            SqlCommand command = new SqlCommand("select * from detailcontract where idcontract = @id", mydb.getConnection);
+            command.Parameters.Add("id", SqlDbType.NVarChar).Value = idcon;
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
     }
 }

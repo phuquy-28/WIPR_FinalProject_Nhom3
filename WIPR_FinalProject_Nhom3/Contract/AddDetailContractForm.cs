@@ -75,5 +75,12 @@ namespace WIPR_FinalProject_Nhom3
 
             }
         }
+
+        private void labelAddVehicle_Click(object sender, EventArgs e)
+        {
+            AddVehicleForm addVehicleFrm = new AddVehicleForm();
+            addVehicleFrm.ShowDialog();
+            reloadloadListBox();
+        }
     }
 }

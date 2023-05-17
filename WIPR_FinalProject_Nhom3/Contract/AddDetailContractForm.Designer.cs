@@ -41,6 +41,7 @@
             this.dateTimePickerEnd = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.richTextBoxDes = new System.Windows.Forms.RichTextBox();
+            this.labelAddVehicle = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -136,7 +137,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(27, 314);
+            this.label3.Location = new System.Drawing.Point(27, 317);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(89, 20);
             this.label3.TabIndex = 75;
@@ -145,7 +146,7 @@
             // dateTimePickerEnd
             // 
             this.dateTimePickerEnd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerEnd.Location = new System.Drawing.Point(122, 314);
+            this.dateTimePickerEnd.Location = new System.Drawing.Point(122, 317);
             this.dateTimePickerEnd.Name = "dateTimePickerEnd";
             this.dateTimePickerEnd.Size = new System.Drawing.Size(150, 20);
             this.dateTimePickerEnd.TabIndex = 74;
@@ -168,11 +169,25 @@
             this.richTextBoxDes.TabIndex = 77;
             this.richTextBoxDes.Text = "";
             // 
+            // labelAddVehicle
+            // 
+            this.labelAddVehicle.AutoSize = true;
+            this.labelAddVehicle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelAddVehicle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAddVehicle.Location = new System.Drawing.Point(12, 369);
+            this.labelAddVehicle.Name = "labelAddVehicle";
+            this.labelAddVehicle.Size = new System.Drawing.Size(82, 13);
+            this.labelAddVehicle.TabIndex = 78;
+            this.labelAddVehicle.Text = "Add Vehicle?";
+            this.labelAddVehicle.Click += new System.EventHandler(this.labelAddVehicle_Click);
+            // 
             // AddDetailContractForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(700, 358);
+            this.ClientSize = new System.Drawing.Size(700, 398);
+            this.Controls.Add(this.labelAddVehicle);
             this.Controls.Add(this.richTextBoxDes);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -209,5 +224,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerEnd;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.RichTextBox richTextBoxDes;
+        private System.Windows.Forms.Label labelAddVehicle;
     }
 }

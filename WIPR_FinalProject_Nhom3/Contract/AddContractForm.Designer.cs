@@ -33,7 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBoxContractId = new System.Windows.Forms.TextBox();
             this.textBoxCustomerId = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBoxCustomerName = new System.Windows.Forms.TextBox();
@@ -48,6 +47,7 @@
             this.buttonAddDetail = new System.Windows.Forms.Button();
             this.textBoxTotal = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.textBoxContractId = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // radioButtonForRent
@@ -103,14 +103,6 @@
             this.label3.Size = new System.Drawing.Size(104, 20);
             this.label3.TabIndex = 12;
             this.label3.Text = "Contract Id:";
-            // 
-            // textBoxContractId
-            // 
-            this.textBoxContractId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxContractId.Location = new System.Drawing.Point(195, 109);
-            this.textBoxContractId.Name = "textBoxContractId";
-            this.textBoxContractId.Size = new System.Drawing.Size(185, 26);
-            this.textBoxContractId.TabIndex = 13;
             // 
             // textBoxCustomerId
             // 
@@ -243,11 +235,20 @@
             this.label9.Text = "Total:";
             this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
+            // textBoxContractId
+            // 
+            this.textBoxContractId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxContractId.Location = new System.Drawing.Point(195, 109);
+            this.textBoxContractId.Name = "textBoxContractId";
+            this.textBoxContractId.Size = new System.Drawing.Size(185, 26);
+            this.textBoxContractId.TabIndex = 48;
+            // 
             // AddContractForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(796, 359);
+            this.Controls.Add(this.textBoxContractId);
             this.Controls.Add(this.textBoxTotal);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.buttonAddDetail);
@@ -262,7 +263,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.textBoxCustomerId);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.textBoxContractId);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.radioButtonForRent);
             this.Controls.Add(this.radioButtonRent);
@@ -281,7 +281,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBoxContractId;
         private System.Windows.Forms.TextBox textBoxCustomerId;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBoxCustomerName;
@@ -296,5 +295,6 @@
         private System.Windows.Forms.Button buttonAddDetail;
         private System.Windows.Forms.TextBox textBoxTotal;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.TextBox textBoxContractId;
     }
 }
