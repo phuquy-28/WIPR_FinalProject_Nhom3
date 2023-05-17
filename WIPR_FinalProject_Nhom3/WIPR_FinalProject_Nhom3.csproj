@@ -50,6 +50,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Contract\AddContractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\AddContractForm.Designer.cs">
+      <DependentUpon>AddContractForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\CONTRACT.cs" />
+    <Compile Include="Contract\ContractList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\ContractList.Designer.cs">
+      <DependentUpon>ContractList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\DeleteContractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\DeleteContractForm.Designer.cs">
+      <DependentUpon>DeleteContractForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contract\EditContractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contract\EditContractForm.Designer.cs">
+      <DependentUpon>EditContractForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EMPLOYEE.cs" />
     <Compile Include="Employee\AddEmployeeForm.cs">
       <SubType>Form</SubType>
@@ -76,6 +101,11 @@
     </Compile>
     <Compile Include="Manager\ManageEmployeeForm.Designer.cs">
       <DependentUpon>ManageEmployeeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PARKING_LOTDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PARKING_LOTDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="PARKPLACE.cs" />
     <Compile Include="ParkPlace\AddParkPlaceForm.cs">
@@ -178,6 +208,12 @@
     </Compile>
     <Compile Include="ParkPlace\USER.cs" />
     <Compile Include="Vehicle\VEHICLE.cs" />
+    <Compile Include="Income\ViewIncomeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Income\ViewIncomeForm.Designer.cs">
+      <DependentUpon>ViewIncomeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Work\WORK.cs" />
     <Compile Include="Work\AddWorkForm.cs">
       <SubType>Form</SubType>
@@ -231,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Employee\RemoveEmployeeForm.resx">
       <DependentUpon>RemoveEmployeeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Income\ViewIncomeForm.resx">
+      <DependentUpon>ViewIncomeForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ParkPlace\AddParkPlaceForm.resx">
       <DependentUpon>AddParkPlaceForm.cs</DependentUpon>
@@ -304,6 +343,17 @@
       <DependentUpon>UpdateWorkForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="PARKING_LOTDataSet.xsc">
+      <DependentUpon>PARKING_LOTDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PARKING_LOTDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PARKING_LOTDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PARKING_LOTDataSet.xss">
+      <DependentUpon>PARKING_LOTDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -331,8 +381,6 @@
   <ItemGroup>
     <None Include="Resources\parking logo.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Income\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

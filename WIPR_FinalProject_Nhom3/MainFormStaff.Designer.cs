@@ -46,20 +46,20 @@
             this.contractListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.iNCOMEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewIncomeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statisticToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pARKINGSITEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pARKPLACEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.managerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.aDMINToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeParkPlaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.manageEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.eMPLOYEEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewParkPlaceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.viewParkPlaceToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.managerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manageEmployeesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aDMINToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eMPLOYEEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.addEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.removeEmployeeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.employeeListToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statisticToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -96,28 +96,28 @@
             // addVehicleToolStripMenuItem
             // 
             this.addVehicleToolStripMenuItem.Name = "addVehicleToolStripMenuItem";
-            this.addVehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addVehicleToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.addVehicleToolStripMenuItem.Text = "Add Vehicle";
             this.addVehicleToolStripMenuItem.Click += new System.EventHandler(this.addVehicleToolStripMenuItem_Click);
             // 
             // editVehicleToolStripMenuItem
             // 
             this.editVehicleToolStripMenuItem.Name = "editVehicleToolStripMenuItem";
-            this.editVehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editVehicleToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.editVehicleToolStripMenuItem.Text = "Edit Vehicle";
             this.editVehicleToolStripMenuItem.Click += new System.EventHandler(this.editVehicleToolStripMenuItem_Click);
             // 
             // deleteVehicleToolStripMenuItem
             // 
             this.deleteVehicleToolStripMenuItem.Name = "deleteVehicleToolStripMenuItem";
-            this.deleteVehicleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.deleteVehicleToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.deleteVehicleToolStripMenuItem.Text = "Delete Vehicle";
             this.deleteVehicleToolStripMenuItem.Click += new System.EventHandler(this.deleteVehicleToolStripMenuItem_Click);
             // 
             // vehicleListToolStripMenuItem
             // 
             this.vehicleListToolStripMenuItem.Name = "vehicleListToolStripMenuItem";
-            this.vehicleListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.vehicleListToolStripMenuItem.Size = new System.Drawing.Size(147, 22);
             this.vehicleListToolStripMenuItem.Text = "Vehicle List";
             this.vehicleListToolStripMenuItem.Click += new System.EventHandler(this.vehicleListToolStripMenuItem_Click);
             // 
@@ -176,24 +176,28 @@
             this.addContractToolStripMenuItem.Name = "addContractToolStripMenuItem";
             this.addContractToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.addContractToolStripMenuItem.Text = "Add Contract";
+            this.addContractToolStripMenuItem.Click += new System.EventHandler(this.addContractToolStripMenuItem_Click);
             // 
             // editContractToolStripMenuItem
             // 
             this.editContractToolStripMenuItem.Name = "editContractToolStripMenuItem";
             this.editContractToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.editContractToolStripMenuItem.Text = "Edit Contract";
+            this.editContractToolStripMenuItem.Click += new System.EventHandler(this.editContractToolStripMenuItem_Click);
             // 
             // deleteContractToolStripMenuItem
             // 
             this.deleteContractToolStripMenuItem.Name = "deleteContractToolStripMenuItem";
             this.deleteContractToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.deleteContractToolStripMenuItem.Text = "Delete Contract";
+            this.deleteContractToolStripMenuItem.Click += new System.EventHandler(this.deleteContractToolStripMenuItem_Click);
             // 
             // contractListToolStripMenuItem
             // 
             this.contractListToolStripMenuItem.Name = "contractListToolStripMenuItem";
             this.contractListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.contractListToolStripMenuItem.Text = "Contract List";
+            this.contractListToolStripMenuItem.Click += new System.EventHandler(this.contractListToolStripMenuItem_Click);
             // 
             // iNCOMEToolStripMenuItem
             // 
@@ -209,12 +213,7 @@
             this.viewIncomeToolStripMenuItem.Name = "viewIncomeToolStripMenuItem";
             this.viewIncomeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.viewIncomeToolStripMenuItem.Text = "View Income";
-            // 
-            // statisticToolStripMenuItem
-            // 
-            this.statisticToolStripMenuItem.Name = "statisticToolStripMenuItem";
-            this.statisticToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.statisticToolStripMenuItem.Text = "Statistic";
+            this.viewIncomeToolStripMenuItem.Click += new System.EventHandler(this.viewIncomeToolStripMenuItem_Click);
             // 
             // pARKINGSITEToolStripMenuItem
             // 
@@ -234,44 +233,12 @@
             this.pARKPLACEToolStripMenuItem.Text = "Add Park Place";
             this.pARKPLACEToolStripMenuItem.Click += new System.EventHandler(this.pARKPLACEToolStripMenuItem_Click);
             // 
-            // managerToolStripMenuItem
-            // 
-            this.managerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.manageEmployeesToolStripMenuItem});
-            this.managerToolStripMenuItem.Name = "managerToolStripMenuItem";
-            this.managerToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
-            this.managerToolStripMenuItem.Text = "MANAGER";
-            // 
-            // aDMINToolStripMenuItem
-            // 
-            this.aDMINToolStripMenuItem.Name = "aDMINToolStripMenuItem";
-            this.aDMINToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
-            this.aDMINToolStripMenuItem.Text = "ADMIN";
-            // 
             // removeParkPlaceToolStripMenuItem
             // 
             this.removeParkPlaceToolStripMenuItem.Name = "removeParkPlaceToolStripMenuItem";
             this.removeParkPlaceToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.removeParkPlaceToolStripMenuItem.Text = "Edit Park Place";
             this.removeParkPlaceToolStripMenuItem.Click += new System.EventHandler(this.removeParkPlaceToolStripMenuItem_Click);
-            // 
-            // manageEmployeesToolStripMenuItem
-            // 
-            this.manageEmployeesToolStripMenuItem.Name = "manageEmployeesToolStripMenuItem";
-            this.manageEmployeesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.manageEmployeesToolStripMenuItem.Text = "Manage Employees";
-            this.manageEmployeesToolStripMenuItem.Click += new System.EventHandler(this.manageEmployeesToolStripMenuItem_Click);
-            // 
-            // eMPLOYEEToolStripMenuItem
-            // 
-            this.eMPLOYEEToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.addEmployeeToolStripMenuItem,
-            this.editEmployeeToolStripMenuItem,
-            this.removeEmployeeToolStripMenuItem,
-            this.employeeListToolStripMenuItem});
-            this.eMPLOYEEToolStripMenuItem.Name = "eMPLOYEEToolStripMenuItem";
-            this.eMPLOYEEToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
-            this.eMPLOYEEToolStripMenuItem.Text = "EMPLOYEE";
             // 
             // viewParkPlaceToolStripMenuItem
             // 
@@ -286,6 +253,38 @@
             this.viewParkPlaceToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.viewParkPlaceToolStripMenuItem1.Text = "View Park Place";
             this.viewParkPlaceToolStripMenuItem1.Click += new System.EventHandler(this.viewParkPlaceToolStripMenuItem1_Click);
+            // 
+            // managerToolStripMenuItem
+            // 
+            this.managerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.manageEmployeesToolStripMenuItem});
+            this.managerToolStripMenuItem.Name = "managerToolStripMenuItem";
+            this.managerToolStripMenuItem.Size = new System.Drawing.Size(76, 20);
+            this.managerToolStripMenuItem.Text = "MANAGER";
+            // 
+            // manageEmployeesToolStripMenuItem
+            // 
+            this.manageEmployeesToolStripMenuItem.Name = "manageEmployeesToolStripMenuItem";
+            this.manageEmployeesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.manageEmployeesToolStripMenuItem.Text = "Manage Employees";
+            this.manageEmployeesToolStripMenuItem.Click += new System.EventHandler(this.manageEmployeesToolStripMenuItem_Click);
+            // 
+            // aDMINToolStripMenuItem
+            // 
+            this.aDMINToolStripMenuItem.Name = "aDMINToolStripMenuItem";
+            this.aDMINToolStripMenuItem.Size = new System.Drawing.Size(58, 20);
+            this.aDMINToolStripMenuItem.Text = "ADMIN";
+            // 
+            // eMPLOYEEToolStripMenuItem
+            // 
+            this.eMPLOYEEToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addEmployeeToolStripMenuItem,
+            this.editEmployeeToolStripMenuItem,
+            this.removeEmployeeToolStripMenuItem,
+            this.employeeListToolStripMenuItem});
+            this.eMPLOYEEToolStripMenuItem.Name = "eMPLOYEEToolStripMenuItem";
+            this.eMPLOYEEToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
+            this.eMPLOYEEToolStripMenuItem.Text = "EMPLOYEE";
             // 
             // addEmployeeToolStripMenuItem
             // 
@@ -314,6 +313,13 @@
             this.employeeListToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.employeeListToolStripMenuItem.Text = "Employee List";
             this.employeeListToolStripMenuItem.Click += new System.EventHandler(this.employeeListToolStripMenuItem_Click);
+            // 
+            // statisticToolStripMenuItem
+            // 
+            this.statisticToolStripMenuItem.Name = "statisticToolStripMenuItem";
+            this.statisticToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.statisticToolStripMenuItem.Text = "Statistic";
+            this.statisticToolStripMenuItem.Click += new System.EventHandler(this.statisticToolStripMenuItem_Click);
             // 
             // MainFormStaff
             // 
@@ -351,7 +357,6 @@
         private System.Windows.Forms.ToolStripMenuItem contractListToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem iNCOMEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem viewIncomeToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem statisticToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pARKINGSITEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pARKPLACEToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeParkPlaceToolStripMenuItem;
@@ -365,5 +370,6 @@
         private System.Windows.Forms.ToolStripMenuItem editEmployeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removeEmployeeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem employeeListToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem statisticToolStripMenuItem;
     }
 }

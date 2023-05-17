@@ -117,5 +117,35 @@ namespace WIPR_FinalProject_Nhom3
         {
 
         }
+
+        private void addContractToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editContractToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void deleteContractToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contractListToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewIncomeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void statisticToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
