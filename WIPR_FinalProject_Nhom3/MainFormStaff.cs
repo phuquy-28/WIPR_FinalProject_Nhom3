@@ -72,7 +72,8 @@ namespace WIPR_FinalProject_Nhom3
 
         private void pARKPLACEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            AddParkPlaceForm addParkPlaceFrm = new AddParkPlaceForm();
+            addParkPlaceFrm.ShowDialog();
         }
 
         private void removeParkPlaceToolStripMenuItem_Click(object sender, EventArgs e)
@@ -82,12 +83,14 @@ namespace WIPR_FinalProject_Nhom3
 
         private void viewParkPlaceToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            RemoveParkPlaceForm removeParkPlaceFrm = new RemoveParkPlaceForm();
+            removeParkPlaceFrm.ShowDialog();
         }
 
         private void viewParkPlaceToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-
+            ParkPlaceListForm parkPlaceListFrm = new ParkPlaceListForm();
+            parkPlaceListFrm.ShowDialog();
         }
 
         private void addEmployeeToolStripMenuItem_Click(object sender, EventArgs e)

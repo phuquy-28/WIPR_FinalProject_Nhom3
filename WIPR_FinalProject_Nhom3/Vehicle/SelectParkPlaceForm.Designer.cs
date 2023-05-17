@@ -94,7 +94,7 @@
             this.Controls.Add(this.buttonSelect);
             this.Controls.Add(this.dataGridViewParkPlace);
             this.Name = "SelectParkPlaceForm";
-            this.Text = "SelectParkPlaceForm";
+            this.Text = "Select Park Place Form";
             this.Load += new System.EventHandler(this.SelectParkPlaceForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewParkPlace)).EndInit();
             this.ResumeLayout(false);

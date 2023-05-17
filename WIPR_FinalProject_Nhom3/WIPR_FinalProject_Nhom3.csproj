@@ -217,6 +217,15 @@
     <EmbeddedResource Include="ParkPlace\AddParkPlaceForm.resx">
       <DependentUpon>AddParkPlaceForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ParkPlace\EditParkPlaceForm.resx">
+      <DependentUpon>EditParkPlaceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParkPlace\ParkPlaceListForm.resx">
+      <DependentUpon>ParkPlaceListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParkPlace\RemoveParkPlaceForm.resx">
+      <DependentUpon>RemoveParkPlaceForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vehicle\CheckOutForm.resx">
       <DependentUpon>CheckOutForm.cs</DependentUpon>
     </EmbeddedResource>
