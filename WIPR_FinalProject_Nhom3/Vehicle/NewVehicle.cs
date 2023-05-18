@@ -169,15 +169,12 @@ namespace WIPR_FinalProject_Nhom3
                 {
                     MessageBox.Show("IdVehicle has already exist", "Add Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-        }
+            }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Add Vehicle", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
-
-}
+        }
 
         private void buttonAddWork_Click(object sender, EventArgs e)
         {

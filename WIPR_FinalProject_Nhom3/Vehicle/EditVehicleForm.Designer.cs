@@ -50,7 +50,6 @@
             this.buttonFindByPlate = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.buttonAddWork = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -76,7 +75,7 @@
             // buttonEdit
             // 
             this.buttonEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonEdit.Location = new System.Drawing.Point(271, 363);
+            this.buttonEdit.Location = new System.Drawing.Point(399, 369);
             this.buttonEdit.Name = "buttonEdit";
             this.buttonEdit.Size = new System.Drawing.Size(108, 35);
             this.buttonEdit.TabIndex = 44;
@@ -279,23 +278,11 @@
             this.pictureBox1.TabIndex = 39;
             this.pictureBox1.TabStop = false;
             // 
-            // buttonAddWork
-            // 
-            this.buttonAddWork.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonAddWork.Location = new System.Drawing.Point(530, 363);
-            this.buttonAddWork.Name = "buttonAddWork";
-            this.buttonAddWork.Size = new System.Drawing.Size(108, 35);
-            this.buttonAddWork.TabIndex = 49;
-            this.buttonAddWork.Text = "Add Work";
-            this.buttonAddWork.UseVisualStyleBackColor = true;
-            this.buttonAddWork.Click += new System.EventHandler(this.buttonAddWork_Click);
-            // 
             // EditVehicleForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.buttonAddWork);
             this.Controls.Add(this.buttonFindByPlate);
             this.Controls.Add(this.buttonFindById);
             this.Controls.Add(this.textBoxBrand);
@@ -351,6 +338,5 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonFindById;
         private System.Windows.Forms.Button buttonFindByPlate;
-        private System.Windows.Forms.Button buttonAddWork;
     }
 }

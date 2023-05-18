@@ -326,25 +326,25 @@ namespace WIPR_FinalProject_Nhom3
             }
         }
 
-        private void buttonAddWork_Click(object sender, EventArgs e)
-        {
-            AddBillForm addBillFrm = new AddBillForm();
-            addBillFrm.idVehicle = textBoxIdVehicle.Text.ToString();
-            string dateString = dateTimePickerTimeIn.Value.ToString("dd/MM/yyyy hh:mm:tt");
-            DateTime timeIn = DateTime.ParseExact(dateString, "dd/MM/yyyy hh:mm:tt", CultureInfo.InvariantCulture);
-            addBillFrm.TimeIn = timeIn;
-            if (radioButtonCar.Checked)
-                addBillFrm.typeOfVehicle = "Car";
-            else if (radioButtonMotor.Checked)
-                addBillFrm.typeOfVehicle = "Motor";
-            else
-                addBillFrm.typeOfVehicle = "Bicycle";
+        //private void buttonAddWork_Click(object sender, EventArgs e)
+        //{
+        //    AddBillForm addBillFrm = new AddBillForm();
+        //    addBillFrm.idVehicle = textBoxIdVehicle.Text.ToString();
+        //    string dateString = dateTimePickerTimeIn.Value.ToString("dd/MM/yyyy hh:mm:tt");
+        //    DateTime timeIn = DateTime.ParseExact(dateString, "dd/MM/yyyy hh:mm:tt", CultureInfo.InvariantCulture);
+        //    addBillFrm.TimeIn = timeIn;
+        //    if (radioButtonCar.Checked)
+        //        addBillFrm.typeOfVehicle = "Car";
+        //    else if (radioButtonMotor.Checked)
+        //        addBillFrm.typeOfVehicle = "Motor";
+        //    else
+        //        addBillFrm.typeOfVehicle = "Bicycle";
 
-            if (radioButtonCar.Checked || radioButtonMotor.Checked)
-                addBillFrm.licensePlate = textBoxLicensePlate.Text.ToString();
-            else
-                addBillFrm.licensePlate = "";
-            addBillFrm.ShowDialog();
-        }
+        //    if (radioButtonCar.Checked || radioButtonMotor.Checked)
+        //        addBillFrm.licensePlate = textBoxLicensePlate.Text.ToString();
+        //    else
+        //        addBillFrm.licensePlate = "";
+        //    addBillFrm.ShowDialog();
+        //}
     }
 }

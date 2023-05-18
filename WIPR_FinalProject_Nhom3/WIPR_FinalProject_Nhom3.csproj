@@ -157,6 +157,12 @@
     <Compile Include="Contract\SelectContractForm.Designer.cs">
       <DependentUpon>SelectContractForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PedingAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PedingAccountForm.Designer.cs">
+      <DependentUpon>PedingAccountForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SelectEmployeeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -328,6 +334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Contract\SelectContractForm.resx">
       <DependentUpon>SelectContractForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PedingAccountForm.resx">
+      <DependentUpon>PedingAccountForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="SelectEmployeeForm.resx">
       <DependentUpon>SelectEmployeeForm.cs</DependentUpon>

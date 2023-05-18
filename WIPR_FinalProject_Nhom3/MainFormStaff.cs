@@ -152,5 +152,11 @@ namespace WIPR_FinalProject_Nhom3
         {
 
         }
+
+        private void pendingAccountToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PedingAccountForm pendingAccountFrm = new PedingAccountForm();
+            pendingAccountFrm.ShowDialog();
+        }
     }
 }

@@ -36,32 +36,40 @@ namespace WIPR_FinalProject_Nhom3
 
         private void buttonAddBill_Click(object sender, EventArgs e)
         {
-            string idBill = textBoxIdBill.Text.ToString();
-            if (!verif())
+            try
             {
-                MessageBox.Show("Empty Fields", "Add Bill", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (!bill.IdBillIsExist(idBill))
-            {
-                if (bill.addBill(idBill, idVehicle, typeOfVehicle, TimeIn, licensePlate))
+                string idBill = textBoxIdBill.Text.ToString();
+                if (!verif())
                 {
-                    MessageBox.Show("Adding Bill successfully", "Add Bill", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    textBoxIdBill.Enabled = false;
-                    listBoxAvail.Enabled = true;
-                    listBoxSelect.Enabled = true;
-                    buttonAddWork.Enabled = true;
-                    reloadloadListBox();
+                    MessageBox.Show("Empty Fields", "Add Bill", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                if (!bill.IdBillIsExist(idBill))
+                {
+                    if (bill.addBill(idBill, idVehicle, typeOfVehicle, TimeIn, licensePlate))
+                    {
+                        MessageBox.Show("Adding Bill successfully", "Add Bill", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        textBoxIdBill.Enabled = false;
+                        listBoxAvail.Enabled = true;
+                        listBoxSelect.Enabled = true;
+                        buttonAddWork.Enabled = true;
+                        reloadloadListBox();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Adding Bill fail", "Add Bill", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("Adding Bill fail", "Add Bill", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Id has already exist", "Add Bill", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Id has already exist", "Add Bill", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message);
             }
+            
             
         }
 
@@ -77,55 +85,63 @@ namespace WIPR_FinalProject_Nhom3
 
         private void buttonAddWork_Click(object sender, EventArgs e)
         {
-            if (listBoxAvail.SelectedItem != null) // Kiểm tra nếu có item được chọn trong lisbAvail
+            try
             {
-                // Lấy ra dòng đã chọn trong ListBox
-                DataRowView selectedRow = (DataRowView)listBoxAvail.SelectedItem;
-                string idBill = textBoxIdBill.Text.ToString();
-                string idWork = selectedRow["IdWork"].ToString();
-                double price = (double)selectedRow["Price"];
-                if ((Int32)selectedRow["idTypeOfWork"] == 1)
+                if (listBoxAvail.SelectedItem != null) // Kiểm tra nếu có item được chọn trong lisbAvail
                 {
-                    SelectParkPlaceForm selectParkPlaceFrm = new SelectParkPlaceForm();
-                    selectParkPlaceFrm.idBill = idBill;
-                    selectParkPlaceFrm.idWork = idWork;
-                    selectParkPlaceFrm.price = (float)price;
-                    selectParkPlaceFrm.typeOfVehicle = selectedRow["TypeOfCar"].ToString();
-                    selectParkPlaceFrm.idVehicle = idVehicle;
-                    selectParkPlaceFrm.licensePlate = licensePlate;
-                    // Thêm bản sao này vào ListBox
-                    listBoxSelect.Items.Add(selectedRow);
-                    listBoxSelect.ValueMember = "IdWork";
-                    listBoxSelect.DisplayMember = "name";
-
-                    // Lấy ra DataTable đã liên kết với ListBox
-                    DataTable dt = (DataTable)listBoxAvail.DataSource;
-                    dt.Rows.Remove(selectedRow.Row);
-                    selectParkPlaceFrm.ShowDialog();
-                    return;
-                }
-                else
-                {
-                    if(bill.addDetailBill(idBill, idWork, price))
+                    // Lấy ra dòng đã chọn trong ListBox
+                    DataRowView selectedRow = (DataRowView)listBoxAvail.SelectedItem;
+                    string idBill = textBoxIdBill.Text.ToString();
+                    string idWork = selectedRow["IdWork"].ToString();
+                    double price = (double)selectedRow["Price"];
+                    if ((Int32)selectedRow["idTypeOfWork"] == 1)
                     {
-                        MessageBox.Show("Adding work successfully", "Add Work", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        SelectParkPlaceForm selectParkPlaceFrm = new SelectParkPlaceForm();
+                        selectParkPlaceFrm.idBill = idBill;
+                        selectParkPlaceFrm.idWork = idWork;
+                        selectParkPlaceFrm.price = (float)price;
+                        selectParkPlaceFrm.typeOfVehicle = selectedRow["TypeOfCar"].ToString();
+                        selectParkPlaceFrm.idVehicle = idVehicle;
+                        selectParkPlaceFrm.licensePlate = licensePlate;
+                        // Thêm bản sao này vào ListBox
+                        listBoxSelect.Items.Add(selectedRow);
+                        listBoxSelect.ValueMember = "IdWork";
+                        listBoxSelect.DisplayMember = "name";
+
+                        // Lấy ra DataTable đã liên kết với ListBox
+                        DataTable dt = (DataTable)listBoxAvail.DataSource;
+                        dt.Rows.Remove(selectedRow.Row);
+                        selectParkPlaceFrm.ShowDialog();
+                        return;
                     }
                     else
                     {
-                        MessageBox.Show("Adding work fail", "Add Work", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    }
-                    
-                    // Thêm bản sao này vào ListBox
-                    listBoxSelect.Items.Add(selectedRow);
-                    listBoxSelect.ValueMember = "IdWork";
-                    listBoxSelect.DisplayMember = "name";
+                        if (bill.addDetailBill(idBill, idWork, price))
+                        {
+                            MessageBox.Show("Adding work successfully", "Add Work", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
+                        else
+                        {
+                            MessageBox.Show("Adding work fail", "Add Work", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        }
 
-                    // Lấy ra DataTable đã liên kết với ListBox
-                    DataTable dt = (DataTable)listBoxAvail.DataSource;
-                    dt.Rows.Remove(selectedRow.Row);
+                        // Thêm bản sao này vào ListBox
+                        listBoxSelect.Items.Add(selectedRow);
+                        listBoxSelect.ValueMember = "IdWork";
+                        listBoxSelect.DisplayMember = "name";
+
+                        // Lấy ra DataTable đã liên kết với ListBox
+                        DataTable dt = (DataTable)listBoxAvail.DataSource;
+                        dt.Rows.Remove(selectedRow.Row);
+                    }
+
                 }
-                
             }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
         }
     }
 }

@@ -19,6 +19,7 @@ namespace WIPR_FinalProject_Nhom3
             this.AcceptButton = buttonRegister;
         }
         USER user = new USER();
+        public int role_id { get; set; }
 
         private void checkBoxShowPassword_CheckedChanged(object sender, EventArgs e)
         {
@@ -45,32 +46,40 @@ namespace WIPR_FinalProject_Nhom3
         {
             try
             {
+                int id = Convert.ToInt32(textBoxId.Text.ToString());
                 string username = textBoxUsername.Text.ToString();
                 string password = textBoxPassword.Text.ToString();
+                string phone = textBoxPhone.Text.ToString();
                 string email = textBoxEmail.Text.ToString();
-                if (!user.usernameStaffExist(username))
+                int role = role_id;
+                if (!user.IdOrUsernameIsExistPeding(id, username))
                 {
-                    if (user.insertStaff(username, password, email))
+                    if (user.insertPending(id, username, password, phone, email, role))
                     {
-                        MessageBox.Show("Adding succesfully", "Staff Register", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                        textBoxUsername.Clear();
-                        textBoxPassword.Clear();
-                        textBoxEmail.Clear();
+                        MessageBox.Show("Adding succesfully", "Register Form", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        //textBoxUsername.Clear();
+                        //textBoxPassword.Clear();
+                        //textBoxEmail.Clear();
                     }
                     else
                     {
-                        MessageBox.Show("Adding fail", "Staff Register", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("Adding fail", "Register Form", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("The username has already exist", "Staff Register", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("The username or id has already exist", "Register Form", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Staff Register", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void StaffRegisterForm_Load(object sender, EventArgs e)
+        {
+            //MessageBox.Show(role_id.ToString());
         }
     }
 }

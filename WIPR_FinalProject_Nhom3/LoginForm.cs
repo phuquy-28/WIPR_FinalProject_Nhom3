@@ -1,12 +1,15 @@
-﻿using System;
+﻿using Microsoft.Office.Interop.Excel;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace WIPR_FinalProject_Nhom3
 {
@@ -42,12 +45,16 @@ namespace WIPR_FinalProject_Nhom3
             if (radioButtonStaff.Checked)
             {
                 StaffRegisterForm staffRegisterFrm = new StaffRegisterForm();
+                staffRegisterFrm.role_id = 1;   //1 - staff
+                staffRegisterFrm.labeltype.Text = "STAFF ACCOUNT";
                 staffRegisterFrm.ShowDialog();
             }
             else if (radioButtonManager.Checked)
             {
-                ManagerRegisterForm managerRegisterForm = new ManagerRegisterForm();
-                managerRegisterForm.ShowDialog();
+                StaffRegisterForm staffRegisterFrm = new StaffRegisterForm();
+                staffRegisterFrm.role_id = 2;   //2 - manager
+                staffRegisterFrm.labeltype.Text = "MANAGER ACCOUNT";
+                staffRegisterFrm.ShowDialog();
             }
             
         }
