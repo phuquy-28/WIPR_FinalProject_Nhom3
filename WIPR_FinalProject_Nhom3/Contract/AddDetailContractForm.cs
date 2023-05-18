@@ -48,12 +48,13 @@ namespace WIPR_FinalProject_Nhom3
             {
                 // Lấy ra dòng đã chọn trong ListBox
                 DataRowView selectedRow = (DataRowView)listBoxAvail.SelectedItem;
+                string idvehi = selectedRow["IdVehicle"].ToString();
                 string typeVehi = selectedRow["Type"].ToString();
                 string license = selectedRow["LisencePlate"].ToString();
                 DateTime start = dateTimePickerStart.Value;
                 DateTime end = dateTimePickerEnd.Value;
                 string description = richTextBoxDes.Text.ToString();
-                if (contract.addDetailContract(contractId, customerId,typeVehi, license, start, end, description))
+                if (contract.addDetailContract(contractId, idvehi, typeVehi, license, start, end, description))
                 {
                     // Thêm bản sao này vào ListBox
                     listBoxSelect.Items.Add(selectedRow);

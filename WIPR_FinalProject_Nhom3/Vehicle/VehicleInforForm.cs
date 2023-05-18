@@ -267,5 +267,12 @@ namespace WIPR_FinalProject_Nhom3
             checkOutFrm.Plate = textBoxLicensePlate.Text;
             checkOutFrm.ShowDialog();
         }
+
+        private void buttonViewContract_Click(object sender, EventArgs e)
+        {
+            ViewVehicleContractForm vehicleContractFrm = new ViewVehicleContractForm();
+            vehicleContractFrm.idVehicle = textBoxIdVehicle.Text.ToString();
+            vehicleContractFrm.ShowDialog();
+        }
     }
 }

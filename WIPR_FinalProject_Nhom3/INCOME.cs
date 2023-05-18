@@ -23,6 +23,17 @@ namespace WIPR_FinalProject_Nhom3
             adapter.Fill(table);
             return table;
         }
+        public DataTable getListContractToday()
+        {
+            SqlCommand command = new SqlCommand("SELECT * " +
+                "FROM contract " +
+                "WHERE CONVERT(varchar(20), datecreate, 101) = CONVERT(varchar(20), @today, 101)", mydb.getConnection);
+            command.Parameters.Add("@today", SqlDbType.DateTime).Value = DateTime.Now.Date;
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
 
         public DataTable getListBillUseRange(DateTime start, DateTime end)
         {
@@ -30,6 +41,18 @@ namespace WIPR_FinalProject_Nhom3
                 "FROM bill " +
                 "WHERE state = 'finished' AND " +
                 "CONVERT(date, timeout) BETWEEN @startDate AND @endDate", mydb.getConnection);
+            command.Parameters.Add("startDate", SqlDbType.DateTime).Value = start.Date;
+            command.Parameters.Add("endDate", SqlDbType.DateTime).Value = end.Date;
+            SqlDataAdapter adapter = new SqlDataAdapter(command);
+            DataTable table = new DataTable();
+            adapter.Fill(table);
+            return table;
+        }
+        public DataTable getListContractUseRange(DateTime start, DateTime end)
+        {
+            SqlCommand command = new SqlCommand("SELECT * " +
+                "FROM contract " +
+                "WHERE CONVERT(date, datecreate) BETWEEN @startDate AND @endDate", mydb.getConnection);
             command.Parameters.Add("startDate", SqlDbType.DateTime).Value = start.Date;
             command.Parameters.Add("endDate", SqlDbType.DateTime).Value = end.Date;
             SqlDataAdapter adapter = new SqlDataAdapter(command);

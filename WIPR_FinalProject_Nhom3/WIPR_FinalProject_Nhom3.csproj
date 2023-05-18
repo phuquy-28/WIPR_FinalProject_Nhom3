@@ -233,6 +233,12 @@
     <Compile Include="Income\ViewIncomeForm.Designer.cs">
       <DependentUpon>ViewIncomeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewVehicleContractForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewVehicleContractForm.Designer.cs">
+      <DependentUpon>ViewVehicleContractForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Work\WORK.cs" />
     <Compile Include="Work\AddWorkForm.cs">
       <SubType>Form</SubType>
@@ -369,6 +375,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Registration\StaffRegisterForm.resx">
       <DependentUpon>StaffRegisterForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewVehicleContractForm.resx">
+      <DependentUpon>ViewVehicleContractForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Work\AddWorkForm.resx">
       <DependentUpon>AddWorkForm.cs</DependentUpon>
