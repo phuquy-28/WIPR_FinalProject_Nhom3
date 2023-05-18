@@ -42,6 +42,7 @@
             this.radioButtonManager = new System.Windows.Forms.RadioButton();
             this.labelForgetPassWord = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.radioButtonAdmin = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -145,7 +146,7 @@
             this.radioButtonStaff.AutoSize = true;
             this.radioButtonStaff.Checked = true;
             this.radioButtonStaff.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonStaff.Location = new System.Drawing.Point(443, 209);
+            this.radioButtonStaff.Location = new System.Drawing.Point(407, 208);
             this.radioButtonStaff.Name = "radioButtonStaff";
             this.radioButtonStaff.Size = new System.Drawing.Size(52, 19);
             this.radioButtonStaff.TabIndex = 12;
@@ -157,7 +158,7 @@
             // 
             this.radioButtonManager.AutoSize = true;
             this.radioButtonManager.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButtonManager.Location = new System.Drawing.Point(534, 209);
+            this.radioButtonManager.Location = new System.Drawing.Point(498, 208);
             this.radioButtonManager.Name = "radioButtonManager";
             this.radioButtonManager.Size = new System.Drawing.Size(71, 19);
             this.radioButtonManager.TabIndex = 13;
@@ -186,11 +187,23 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // radioButtonAdmin
+            // 
+            this.radioButtonAdmin.AutoSize = true;
+            this.radioButtonAdmin.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonAdmin.Location = new System.Drawing.Point(597, 208);
+            this.radioButtonAdmin.Name = "radioButtonAdmin";
+            this.radioButtonAdmin.Size = new System.Drawing.Size(61, 19);
+            this.radioButtonAdmin.TabIndex = 15;
+            this.radioButtonAdmin.Text = "Admin";
+            this.radioButtonAdmin.UseVisualStyleBackColor = true;
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 355);
+            this.Controls.Add(this.radioButtonAdmin);
             this.Controls.Add(this.labelForgetPassWord);
             this.Controls.Add(this.radioButtonManager);
             this.Controls.Add(this.radioButtonStaff);
@@ -229,5 +242,6 @@
         private System.Windows.Forms.RadioButton radioButtonStaff;
         private System.Windows.Forms.RadioButton radioButtonManager;
         private System.Windows.Forms.Label labelForgetPassWord;
+        private System.Windows.Forms.RadioButton radioButtonAdmin;
     }
 }

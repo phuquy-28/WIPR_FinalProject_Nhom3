@@ -10,5 +10,6 @@ namespace WIPR_FinalProject_Nhom3
     {
         public static int GlobalUserId { get; private set; } = 1;
         public static void SetGlobalUserId(int userId) { GlobalUserId = userId; }
+        public static int role = 0;
     }
 }
